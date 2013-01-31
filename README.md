@@ -28,6 +28,13 @@ Documentation
 
 Ordering and conditions supplied via DataTables work "automagically" and nothing else is needed. Deep relations using the ContainableBehavior will break the response due to the way conditions work within that behavior. To get around this it is recommended that the LinkableBehavior be used instead. See: https://github.com/dereuromark/tools/blob/master/Model/Behavior/LinkableBehavior.php
 
+Remember of course to add the component to your controller:
+```php
+class YourController extends AppController {
+    
+    public $components = array('DataTable');
+```
+
 Basic Usage:
 ```php
     $this->paginate = array(
@@ -74,8 +81,15 @@ With CONCAT Fields. Note once a CONCAT is used we must tell the component the or
         )
     );
     $this->DataTable->fields = array('Field.A','Field.B','0.name');
-    $this->set('shipments',$this->DataTable->getResponse($this,$this->Shipment));
-    $this->set('_serialize','shipments');
+    $this->set('response',$this->DataTable->getResponse($this,$this->NameOfModel));
+    $this->set('_serialize','response');
+```
+
+If you don't use Cakes built in REST code you can ofcourse just do the following to get the response data:
+```php
+$this->autoRender = false;
+// your code here
+echo json_encode($this->DataTable->getResponse($this,$this->NameOfModel));
 ```
 
 Licensing

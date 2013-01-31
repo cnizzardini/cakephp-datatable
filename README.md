@@ -35,6 +35,16 @@ class YourController extends AppController {
     public $components = array('DataTable');
 ```
 
+You should explicitly define all fields you want returned in your paginate fields. If you need to alter the order in which fields are returned set the fields attribute like so:
+```php
+$this->DataTable->fields = array('Field.A','Field.B','Field.C');
+```
+
+If you need to add empty columns to the response set the emptyElements attribute to the number of empty columns needs:
+```php
+$this->DataTable->emptyElements = 2;
+```
+
 Basic Usage:
 ```php
     $this->paginate = array(
@@ -91,6 +101,10 @@ $this->autoRender = false;
 // your code here
 echo json_encode($this->DataTable->getResponse($this,$this->NameOfModel));
 ```
+
+The conditionsByValidate attribute should be avoided for now, but I am working on a way to make the conditions more intelligent. For now the conditions are entered in as Field.A LIKE '%$var%' OR Field.B LIKE '%$var$' etc...
+
+The Component respects many of the options you can define within jQuery DataTables settings such as bSearchable and bSortable on a per field basis.
 
 Licensing
 ------

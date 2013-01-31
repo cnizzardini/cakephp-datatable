@@ -40,7 +40,7 @@ You should explicitly define all fields you want returned in your paginate field
 $this->DataTable->fields = array('Field.A','Field.B','Field.C');
 ```
 
-If you need to add empty columns to the response set the emptyElements attribute to the number of empty columns needs:
+If you need to add empty columns to the response set the emptyElements attribute to the number of empty columns needed:
 ```php
 $this->DataTable->emptyElements = 2;
 ```
@@ -73,7 +73,7 @@ With ContainableBehavior:
 With LinkableBehavior:
 ```php
 	$this->paginate = array(
-	    'fields' => array('Field.A','AssocModel.B','Shipment.created_date'),
+	    'fields' => array('Field.A','AssocModel.B'),
 	    'link' => array('AssocModel')
 	);
 	$this->set('response',$this->DataTable->getResponse($this,$this->NameOfModel));

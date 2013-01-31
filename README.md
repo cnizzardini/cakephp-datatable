@@ -10,7 +10,6 @@ Features
 *	Accepts dataTables WHERE conditions
 *	Accepts dataTables pagination
 *	Works LinkableBehavior and to a lesser extent Containable
-*	Save attachments from remote imap server locally
 
 Dependancies
 ------

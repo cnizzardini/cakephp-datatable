@@ -29,7 +29,11 @@ class DataTableComponent extends Component{
 
         $isFiltered = false;
         
-        // check for order by in GET request
+        if( !empty($conditions) ){
+            $isFiltered = true;
+        }
+        
+        // check for ORDER BY in GET request
         if(isset($this->controller->request->query) && isset($this->controller->request->query['iSortCol_0'])){
             $orderBy = $this->getOrderByStatements();
             if(!empty($orderBy)){
@@ -37,7 +41,7 @@ class DataTableComponent extends Component{
             }
         }
         
-        // check for where statement in GET request
+        // check for WHERE statement in GET request
         if(isset($this->controller->request->query) && !empty($this->controller->request->query['sSearch'])){
             $conditions = $this->getWhereConditions();
 
@@ -49,13 +53,16 @@ class DataTableComponent extends Component{
             }
             $isFiltered = true;
         }
-
         
         // @todo avoid multiple queries for finding count, maybe look into "SQL CALC FOUND ROWS"
         // get full count
         $total = $this->model->find('count');
         
         $parameters = $this->controller->paginate;
+        
+        if($isFiltered){
+            $filteredTotal = $this->model->find('count',$parameters);
+        }
         
         $limit = '';
         
@@ -73,7 +80,7 @@ class DataTableComponent extends Component{
         $response = array(
             'sEcho' => isset($this->controller->request->query['sEcho']) ? intval($this->controller->request->query['sEcho']) : 1,
             'iTotalRecords' => $total,
-            'iTotalDisplayRecords' => $isFiltered === true ? count($data) : $total,
+            'iTotalDisplayRecords' => $isFiltered === true ? $filteredTotal : $total,
             'aaData' => array()
         );
         
@@ -108,15 +115,17 @@ class DataTableComponent extends Component{
         }
         
         $orderBy = '';
-           
+        
+        $fields = !empty($this->fields) ? $this->fields : $this->controller->paginate['fields'];
+        
         // loop through sorting columbns in GET
-        for ( $i=0 ; $i<intval( $this->controller->request->query['iSortingCols'] ) ; $i++ ){
+        //for ( $i=0 ; $i<intval( $this->controller->request->query['iSortingCols'] ) ; $i++ ){
             // if column is found in paginate fields list then add to $orderBy
-            if( isset($this->controller->paginate['fields'][$i]) ){
-                $direction = $this->controller->request->query['sSortDir_'.$i] === 'asc' ? 'asc' : 'desc';
-                $orderBy.= $this->controller->paginate['fields'][$i].' '.$direction.', ';
+            if( !empty($fields) && isset($this->controller->request->query['iSortCol_0']) ){
+                $direction = $this->controller->request->query['sSortDir_0'] === 'asc' ? 'asc' : 'desc';
+                $orderBy = $fields[ $this->controller->request->query['iSortCol_0'] ].' '.$direction.', ';
             }
-        }
+        //}
         
         if(!empty($orderBy)){
             return substr($orderBy,0, -2);

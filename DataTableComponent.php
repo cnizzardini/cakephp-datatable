@@ -9,21 +9,42 @@
 class DataTableComponent extends Component{
     
     private $model;
+    private $controller;
     public $conditionsByValidate = 0;
     public $emptyElements = 0;
     public $fields = array();
     
+    public function initialize(Controller $controller){
+        $this->controller = $controller;
+        $modelName = $this->controller->modelClass;
+        $this->model = $this->controller->{$modelName};
+    }
+    
 /**
  * returns dataTables compatible array - just json_encode the resulting aray
- * @param object $controller
- * @param object $model
+ * @param object $controller optional
+ * @param object $model optional
  * @return array
  */
-    public function getResponse($controller,$model){
-        $this->model = $model;
-        $this->controller = $controller;
-        unset($model);
-        unset($controller);
+    public function getResponse($controller = null, $model=null){
+        
+        /**
+         * it is no longer necessary to pass in a controller or model
+         * this is handled in the initialize method
+         * $controller is disregarded.
+         * $model is only necessary if you are using a model from a different controller such as if you are in 
+         * a CustomerController but your method is displaying data from an OrdersModel.
+         */
+        
+        if($model != null){  
+            if(is_string($model)){
+                $this->model = $this->controller->{$model};
+            }
+            else{
+                $this->model = $model;
+                unset($model);
+            }
+        }
 
         $conditions = isset($this->controller->paginate['conditions']) ? $this->controller->paginate['conditions'] : null;
 

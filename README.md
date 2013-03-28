@@ -106,7 +106,7 @@ The conditionsByValidate attribute should be avoided for now, but I am working o
 The Component respects many of the options you can define within jQuery DataTables settings such as bSearchable and bSortable on a per field basis.
 
 
-Using models from other controllers. Sometimes the case may be that you are in a CustomersController and you have a method within that wants to display data from another model such as an OrdersController. This 
+Using models from other controllers. Sometimes the case may be that you are in a CustomersController and you have a method within that wants to display data from another model such as an Order model. This 
 can be accomplished with the following parameters:
 ```php
 $this->DataTable->getResponse(null,$this->Order);

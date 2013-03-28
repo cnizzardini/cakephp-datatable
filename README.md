@@ -52,7 +52,7 @@ Basic Usage:
             'active'=>1
         )
     );
-    $this->set('response', $this->DataTable->getResponse($this,$this->NameOfModel));
+    $this->set('response', $this->DataTable->getResponse());
     $this->set('_serialize','response');
 ```
 
@@ -65,7 +65,7 @@ With ContainableBehavior:
         )
         'contain' => array('AssocatiatedModal')
     );
-    $this->set('response', $this->DataTable->getResponse($this,$this->NameOfModel));
+    $this->set('response', $this->DataTable->getResponse());
     $this->set('_serialize','response');
 ```
 
@@ -75,7 +75,7 @@ With LinkableBehavior:
 	    'fields' => array('Field.A','AssocModel.B'),
 	    'link' => array('AssocModel')
 	);
-	$this->set('response',$this->DataTable->getResponse($this,$this->NameOfModel));
+	$this->set('response',$this->DataTable->getResponse());
 	$this->set('_serialize','response');
 ```
 
@@ -90,7 +90,7 @@ With CONCAT Fields. Note once a CONCAT is used we must tell the component the or
         )
     );
     $this->DataTable->fields = array('Field.A','Field.B','0.name');
-    $this->set('response',$this->DataTable->getResponse($this,$this->NameOfModel));
+    $this->set('response',$this->DataTable->getResponse());
     $this->set('_serialize','response');
 ```
 
@@ -98,12 +98,19 @@ If you don't use Cakes built in REST code you can ofcourse just do the following
 ```php
 $this->autoRender = false;
 // your code here
-echo json_encode($this->DataTable->getResponse($this,$this->NameOfModel));
+echo json_encode($this->DataTable->getResponse());
 ```
 
 The conditionsByValidate attribute should be avoided for now, but I am working on a way to make the conditions more intelligent. For now the conditions are entered in as Field.A LIKE '%$var%' OR Field.B LIKE '%$var$' etc...
 
 The Component respects many of the options you can define within jQuery DataTables settings such as bSearchable and bSortable on a per field basis.
+
+
+Using models from other controllers. Sometimes the case may be that you are in a CustomersController and you have a method within that wants to display data from another model such as an OrdersController. This 
+can be accomplished with the following parameters:
+```php
+$this->DataTable->getResponse(null,$this->Order);
+```
 
 Licensing
 ------

@@ -114,7 +114,7 @@ $this->DataTable->getResponse(null,$this->Order);
 
 Updates
 ------
-* March 28, 2012 - added initialize method. It use to be that you had to pass in a reference to the Controller and Model when calling getResponse. This is no longer required.
+March 28, 2012 - added initialize method. It use to be that you had to pass in a reference to the Controller and Model when calling getResponse. This is no longer required.
 ```php
 // old way
 $this->DataTable->getResponse($this->OrdersController,$this->Order);

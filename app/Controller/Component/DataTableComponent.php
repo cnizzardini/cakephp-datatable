@@ -1,7 +1,7 @@
 <?php
-
 /**
  * This component provides compatibility between the dataTables jQuery plugin and CakePHP 2
+ * @version 1.1.0
  * @author chris
  * @package DataTableComponent
  * @link http://www.datatables.net/release-datatables/examples/server_side/server_side.html parts of code borrowed from dataTables example

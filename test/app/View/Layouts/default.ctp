@@ -25,20 +25,38 @@
 		CakePHP DataTables Example
 	</title>
     <link rel="stylesheet" media="screen" href="/js/datatables/css/jquery.dataTables.css" type="text/css" /> 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script src="/js/datatables/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" media="screen" href="/css/bootstrap.min.css" type="text/css" /> 
+    <link rel="stylesheet" media="screen" href="/css/bootstrap-responsive.min.css" type="text/css" /> 
 </head>
 <body>
-	<div id="container">
-		<div id="header">
-			<h1>CakePHP DataTables Example</h1>
-		</div>
-		<div id="content">
-
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/">CakePHP DataTables Demo</a>
+          <div class="nav-collapse collapse">
+<!--             <p class="navbar-text pull-right">
+              Logged in as <a href="#" class="navbar-link">Username</a>
+            </p> -->
+            <ul class="nav">
+              <li><a href="/">Using Linkable</a></li>
+              <li><a href="/">Using Containable</a></li>
+                          </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+	<div class="container-fluid">
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
-		</div>
 	</div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="/js/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="/js/examples.js"></script>
 </body>
 </html>

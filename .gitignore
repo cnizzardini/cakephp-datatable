@@ -7,3 +7,5 @@
 /app/tmp/tests/
 /app/tmp/logs/
 /app/Config/database.php
+/nbproject/private/
+/test/app/Config/database.php

@@ -1,4 +1,4 @@
-<table id="states-table" class="table table-bordered table-striped table_vam">
+<table id="linkable" class="table table-bordered table-striped table_vam">
     <thead>
     <tr>
         <th>ID</th>

@@ -112,6 +112,12 @@ can be accomplished with the following parameters:
 $this->DataTable->getResponse(null,$this->Order);
 ```
 
+Demo Application
+------
+The demo application is designed for CakePHP 2.3 and was built on Ubuntu 12.10 running Apache2 with PHP 5.4. Place test in your web. It does not 
+have the full Cake framework in it, so you'll need to have cakephp in your php include paths or create a symbolic link to cake in test. There is 
+a schema associated with this, for instructions on building schema review http://book.cakephp.org/2.0/en/console-and-shells/schema-management-and-migrations.html
+
 Updates
 ------
 May 25, 2013 - added full demo under test. Resolved some bugs dealing with SQL LIMITS and cleared up some error handling.

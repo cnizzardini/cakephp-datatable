@@ -22,6 +22,11 @@ Installation
 
 You can either clone the project, download the project, or just copy & paste DataTableComponent.php into your projects Controller/Component directory
 
+Demo
+------
+http://cakephpdatatables.cnizz.com/
+
+
 Documentation
 ------
 

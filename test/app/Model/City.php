@@ -32,6 +32,6 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class City extends Model {
-    public $actsAs = array('Linkable');
+    public $actsAs = array('Linkable','Containable');
     public $belongsTo = array('State');
 }

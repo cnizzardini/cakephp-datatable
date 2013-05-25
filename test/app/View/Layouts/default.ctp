@@ -49,10 +49,12 @@
                     <b class="caret"></b>
                   </a>
                   <ul class="dropdown-menu">
-                      <li><a href="/">Linkable</a></li>
-                      <li><a href="/">Containable</a></li>
-                      <li><a href="/">CONCAT</a></li>
-                      <li><a href="/">VirtualFields</a></li>
+                      <li><a href="/cities/index">Basic</a></li>
+                      <li><a href="/cities/linkable">Linkable</a></li>
+                      <li><a href="/cities/containable">Containable</a></li>
+                      <li><a href="/cities/concat">CONCAT</a></li>
+                      <li><a href="/cities/virtualFields">VirtualFields</a></li>
+                      <li><a href="/cities/noJsonHandler">No JSON Handler</a></li>
                   </ul>
                 </li>
                 <li><a href="#README" data-toggle="modal">README</a></li>

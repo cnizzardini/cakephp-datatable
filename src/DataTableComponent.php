@@ -5,27 +5,6 @@
  * @author chris
  * @package DataTableComponent
  * @link http://www.datatables.net/release-datatables/examples/server_side/server_side.html parts of code borrowed from dataTables example
-
-Copyright (c) 2013 Chris Nizzardini
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
  */
 class DataTableComponent extends Component{
     
@@ -151,22 +130,18 @@ class DataTableComponent extends Component{
  */
     private function getOrderByStatements(){
         
-        if( !isset($this->controller->paginate['fields']) && !empty($this->controller->paginate['contain']) && empty($this->fields) ){
-            throw new Exception("Missing field and/or contain option in Paginate. Please set the fields so I know what to order by.");
+        if( !isset($this->controller->paginate['fields']) && empty($this->fields) ){
+            throw new Exception("Missing fields option in Paginate. Please set the fields so I know what to order by.");
         }
         
         $orderBy = '';
         
         $fields = !empty($this->fields) ? $this->fields : $this->controller->paginate['fields'];
         
-        // loop through sorting columbns in GET
-        //for ( $i=0 ; $i<intval( $this->controller->request->query['iSortingCols'] ) ; $i++ ){
-            // if column is found in paginate fields list then add to $orderBy
-            if( !empty($fields) && isset($this->controller->request->query['iSortCol_0']) ){
-                $direction = $this->controller->request->query['sSortDir_0'] === 'asc' ? 'asc' : 'desc';
-                $orderBy = $fields[ $this->controller->request->query['iSortCol_0'] ].' '.$direction.', ';
-            }
-        //}
+        if( !empty($fields) && isset($this->controller->request->query['iSortCol_0']) ){
+            $direction = $this->controller->request->query['sSortDir_0'] === 'asc' ? 'asc' : 'desc';
+            $orderBy = $fields[ $this->controller->request->query['iSortCol_0'] ].' '.$direction.', ';
+        }
         
         if(!empty($orderBy)){
             return substr($orderBy,0, -2);

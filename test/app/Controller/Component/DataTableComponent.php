@@ -85,19 +85,17 @@ class DataTableComponent extends Component{
             $filteredTotal = $this->model->find('count',$parameters);
         }
         
-        $limit = '';
-        
         // set sql limits
         if( isset($this->controller->request->query['iDisplayStart']) && $this->controller->request->query['iDisplayLength'] != '-1' ){
             $start = $this->controller->request->query['iDisplayStart'];
             $length = $this->controller->request->query['iDisplayLength'];
             $parameters['limit'] = $length;
-            $parameters['start'] = $start;
+            $parameters['page'] = ($start/$length)+1;
         }
         
         // execute sql select
         $data = $this->model->find('all', $parameters);
-
+        
         // dataTables compatible array
         $response = array(
             'sEcho' => isset($this->controller->request->query['sEcho']) ? intval($this->controller->request->query['sEcho']) : 1,

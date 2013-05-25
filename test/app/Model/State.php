@@ -32,5 +32,5 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class State extends Model {
-    
+    public $hasMany = array('City');
 }

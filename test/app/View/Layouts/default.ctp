@@ -51,9 +51,11 @@
       </div>
     </div>
 	<div class="container-fluid">
+        <div class="row-fluid" style="margin-top:100px">
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
+        </div>
 	</div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script src="/js/datatables/js/jquery.dataTables.min.js"></script>

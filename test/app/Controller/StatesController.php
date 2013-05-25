@@ -1,21 +1,17 @@
 <?php
-App::uses('AppController', 'Controller');
+App::uses('Controller', 'Controller');
 
-class StatesController extends AppController
-{
+class StatesController extends AppController {
+    
     public $components = array('DataTable');
-
-    public function index() {
-
-        if ($this->RequestHandler->responseType() == 'json') {
-            $this->paginate  = array(
-                'fields' => array('State.id', 'State.name', 'State.abbrev'),
-            );
-            $this->set('states', $this->DataTable->getResponse());
+    
+    public function index(){
+        if($this->RequestHandler->responseType() == 'json') {
+            $this->set('states', array());
             $this->set('_serialize', 'states');
-        }
+        } 
         else{
-			// other non json request logic here
-		}
+            
+        }
     }
 }

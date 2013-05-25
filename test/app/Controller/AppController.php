@@ -32,4 +32,17 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+    
+    public $components = array(
+		'Session',
+        'RequestHandler',
+		'Paginator'
+    );
+    
+    public function beforeFilter(){
+        parent::beforeFilter();
+        if($this->RequestHandler->responseType() == 'json'){
+            $this->RequestHandler->setContent('json', 'application/json' );
+        }
+    }
 }

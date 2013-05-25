@@ -6,3 +6,4 @@
 /app/tmp/cache/
 /app/tmp/tests/
 /app/tmp/logs/
+/app/Config/database.php

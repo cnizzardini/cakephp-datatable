@@ -85,10 +85,8 @@
         <p><a href="http://blog.cnizz.com/2013/01/31/cakephp-datatables-a-component-for-interoperability-between-cakephp-and-jquery-datatables/">My Blog Post on the Project</a></p>
         <p><a href="http://www.twitter.com/cnizzdotcom">Follow Me on Twitter</a></p>
         <p><strong>Other Stuff</strong></p>
-        <p>Review the code to see how I did everything. Code can easily be found in the controllers, views, and webroot/js. For some funky 
-        reason CakePHP changed how LIMITS work in CakePHP 2.3.5. So this is only known to work with Cake 2.0 - 2.3.1. I will do a release to 
-        deal with whatever the Cake Devs changed or please feel free to help me out!
-        If you need help with this submit an issue, ask me on twitter, or comment on my blog post. Thanks for downloading!</p>
+        <p>Review the code to see how I did everything. Code can easily be found in the controllers, views, and webroot/js. This has been 
+        tested on CakePHP 2.3. If you need help with this submit an issue, ask me on twitter, or comment on my blog post. Thanks for downloading!</p>
         <p><strong>Your are using CakePHP Version <?=Configure::version()?></strong></p>
       </div>
     </div>

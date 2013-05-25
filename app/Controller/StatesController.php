@@ -1,7 +1,7 @@
 <?php
 App::uses('AppController', 'Controller');
 
-class TreadDesignsController extends AppController
+class StatesController extends AppController
 {
     public $components = array('DataTable');
 

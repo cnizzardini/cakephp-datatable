@@ -1,0 +1,956 @@
+2013-03-23 15:58:34 Error: [MissingControllerException] Controller class BootstrapController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 15:58:34 Error: [MissingControllerException] Controller class Main.cssController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 15:58:34 Error: [MissingControllerException] Controller class BootstrapController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 15:58:34 Error: [MissingControllerException] Controller class BootstrapController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 15:58:34 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 16:00:03 Error: [MissingControllerException] Controller class Main.cssController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 16:00:04 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 16:00:33 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 16:00:34 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 16:00:35 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 16:00:35 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 16:00:35 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 16:00:36 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 16:01:13 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 16:01:25 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 16:01:44 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 16:01:57 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 16:01:59 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 16:02:12 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 16:27:51 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 16:52:20 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 16:52:28 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 16:53:03 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:37:17 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:38:34 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:38:57 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:39:01 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:39:07 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:39:11 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:39:24 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:39:33 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:39:39 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:39:41 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:39:55 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:40:11 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:40:34 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:40:56 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:41:01 Error: [MissingViewException] View file "/var/www/git/submitmelocal/app/View/Users/register.ctp" is missing.
+#0 /var/www/cakephp2/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /var/www/cakephp2/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-23 17:43:07 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'validationErrors' at line 1
+#0 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('validationError...', Array)
+#2 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('validationError...', Array, Array)
+#3 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(611): DboSource->fetchAll('validationError...', Array, Array)
+#4 /var/www/cakephp2/lib/Cake/Model/Model.php(788): DboSource->query('validationError...', Array, Object(User))
+#5 /var/www/git/submitmelocal/app/Controller/UsersController.php(38): Model->__call('validationError...', Array)
+#6 /var/www/git/submitmelocal/app/Controller/UsersController.php(38): User->validationErrors()
+#7 [internal function]: UsersController->register('1')
+#8 /var/www/cakephp2/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-03-23 17:43:40 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:49:07 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:53:54 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:54:08 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:54:38 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:55:19 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:55:33 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:55:48 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:56:01 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 17:56:34 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 18:10:56 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 18:11:40 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 18:11:57 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 18:12:23 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 18:12:42 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 18:13:24 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 18:13:32 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 18:14:08 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 18:14:15 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 18:14:55 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 18:15:09 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 18:16:02 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 18:16:36 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 18:16:50 Error: Fatal Error (1): Class 'AuthComponent' not found in [/var/www/git/submitmelocal/app/Model/User.php, line 107]
+2013-03-23 18:16:50 Error: [FatalErrorException] Class 'AuthComponent' not found
+#0 /var/www/cakephp2/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Class 'AuthComp...', '/var/www/git/su...', 107)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'AuthComp...', '/var/www/git/su...', 107, Array)
+#2 /var/www/cakephp2/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'AuthComp...', '/var/www/git/su...', 107, Array)
+#3 /var/www/cakephp2/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-23 18:19:35 Error: Fatal Error (1): Class 'AuthComponent' not found in [/var/www/git/submitmelocal/app/Model/User.php, line 107]
+2013-03-23 18:19:35 Error: [FatalErrorException] Class 'AuthComponent' not found
+#0 /var/www/cakephp2/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Class 'AuthComp...', '/var/www/git/su...', 107)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'AuthComp...', '/var/www/git/su...', 107, Array)
+#2 /var/www/cakephp2/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'AuthComp...', '/var/www/git/su...', 107, Array)
+#3 /var/www/cakephp2/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-23 18:35:53 Error: [MissingActionException] Action UsersController::login() could not be found.
+#0 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-23 18:35:54 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 18:35:59 Error: [MissingActionException] Action UsersController::login() could not be found.
+#0 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-23 18:35:59 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 18:36:31 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in [/var/www/git/submitmelocal/app/Controller/AppController.php, line 46]
+2013-03-23 18:36:31 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')'
+#0 /var/www/cakephp2/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/git/su...', 46)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/git/su...', 46, Array)
+#2 /var/www/cakephp2/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/git/su...', 46, Array)
+#3 /var/www/cakephp2/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-23 18:36:36 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 18:37:01 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 18:41:32 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'cnizzardini@gmail.com' for key 'email_UNIQUE'
+#0 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('INSERT INTO `su...', Array)
+#2 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(1007): DboSource->execute('INSERT INTO `su...')
+#3 /var/www/cakephp2/lib/Cake/Model/Model.php(1734): DboSource->create(Object(User), Array, Array)
+#4 /var/www/git/submitmelocal/app/Controller/UsersController.php(39): Model->save(Array)
+#5 [internal function]: UsersController->register('1')
+#6 /var/www/cakephp2/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-03-23 18:43:07 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 22:09:50 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 22:10:22 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-23 22:19:51 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:18:38 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:20:26 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:20:38 Error: [MissingActionException] Action UsersController::login() could not be found.
+#0 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-25 07:20:38 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:20:42 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:22:55 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:24:42 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:24:59 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:25:57 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:26:10 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:26:16 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:26:22 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:26:48 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:27:03 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:27:35 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:28:23 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:30:39 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:30:47 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:31:02 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:31:22 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:31:32 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:31:55 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:32:23 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:32:31 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:32:51 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:36:25 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:36:30 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:36:40 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:36:58 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:37:03 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:38:17 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:38:39 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:40:00 Error: Fatal Error (1): Call to undefined method SessionComponent::flash() in [/var/www/git/submitmelocal/app/Controller/UsersController.php, line 124]
+2013-03-25 07:40:00 Error: [FatalErrorException] Call to undefined method SessionComponent::flash()
+#0 /var/www/cakephp2/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/git/su...', 124)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/git/su...', 124, Array)
+#2 /var/www/cakephp2/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/git/su...', 124, Array)
+#3 /var/www/cakephp2/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-25 07:40:01 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:41:39 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in [/var/www/git/submitmelocal/app/Controller/AppController.php, line 43]
+2013-03-25 07:41:39 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')'
+#0 /var/www/cakephp2/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/git/su...', 43)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/git/su...', 43, Array)
+#2 /var/www/cakephp2/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/git/su...', 43, Array)
+#3 /var/www/cakephp2/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-25 07:41:47 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:42:12 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:42:17 Error: [CakeException] Authentication adapter "Blowfish" was not found.
+#0 /var/www/cakephp2/lib/Cake/Controller/Component/AuthComponent.php(630): AuthComponent->constructAuthenticate()
+#1 /var/www/cakephp2/lib/Cake/Controller/Component/AuthComponent.php(510): AuthComponent->identify(Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/git/submitmelocal/app/Controller/UsersController.php(119): AuthComponent->login()
+#3 [internal function]: UsersController->login()
+#4 /var/www/cakephp2/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-03-25 07:42:17 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:42:45 Error: Fatal Error (1): Call to undefined method SessionComponent::flash() in [/var/www/git/submitmelocal/app/Controller/UsersController.php, line 124]
+2013-03-25 07:42:45 Error: [FatalErrorException] Call to undefined method SessionComponent::flash()
+#0 /var/www/cakephp2/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/git/su...', 124)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/git/su...', 124, Array)
+#2 /var/www/cakephp2/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/git/su...', 124, Array)
+#3 /var/www/cakephp2/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-25 07:42:45 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:43:38 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:43:51 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:44:46 Error: Fatal Error (4): syntax error, unexpected ')', expecting ']' in [/var/www/git/submitmelocal/app/Controller/UsersController.php, line 123]
+2013-03-25 07:44:46 Error: [FatalErrorException] syntax error, unexpected ')', expecting ']'
+#0 /var/www/cakephp2/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/git/su...', 123)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/git/su...', 123, Array)
+#2 /var/www/cakephp2/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/git/su...', 123, Array)
+#3 /var/www/cakephp2/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-25 07:44:46 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:44:55 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 07:47:13 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 22:23:42 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 22:44:05 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 22:44:10 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 22:44:38 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 22:44:50 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 22:45:09 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 22:45:14 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 22:46:27 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 22:47:09 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 22:55:41 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 22:57:43 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 22:57:57 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 22:58:19 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-27 08:24:55 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-30 11:57:30 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-30 12:01:11 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-30 12:03:27 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-30 12:06:46 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-30 12:07:17 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-30 12:08:27 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-30 12:08:59 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-30 12:09:38 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-30 12:10:32 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-30 12:10:40 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-30 12:11:04 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-30 12:11:22 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-30 12:11:28 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-30 12:11:32 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-30 12:11:38 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-30 12:11:46 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-30 12:12:50 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 19:03:27 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:43:29 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:44:03 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:44:16 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:45:03 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:45:23 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:45:28 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:45:31 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:45:38 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:45:40 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:45:41 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:46:09 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:46:57 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:48:07 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:49:47 Error: Fatal Error (4): syntax error, unexpected $end in [/var/www/git/submitmelocal/app/View/Layouts/default.ctp, line 117]
+2013-03-31 20:49:47 Error: [FatalErrorException] syntax error, unexpected $end
+#0 /var/www/cakephp2/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/git/su...', 117)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/git/su...', 117, Array)
+#2 /var/www/cakephp2/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/git/su...', 117, Array)
+#3 /var/www/cakephp2/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-31 20:49:56 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:50:23 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:50:30 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:50:38 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:51:26 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:51:33 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:51:47 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:55:34 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:55:50 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:55:52 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:56:33 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:56:48 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 20:56:58 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 21:01:08 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 21:04:01 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 21:04:12 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 21:05:10 Error: [MissingTableException] Table user_sites_local_citations for model UserSitesLocalCitation was not found in datasource default.
+#0 /var/www/cakephp2/lib/Cake/Model/Model.php(3186): Model->setSource('user_sites_loca...')
+#1 /var/www/cakephp2/lib/Cake/Model/Model.php(1305): Model->getDataSource()
+#2 /var/www/cakephp2/lib/Cake/Model/Model.php(851): Model->schema()
+#3 /var/www/cakephp2/lib/Cake/Model/Model.php(876): Model->__isset('UserSitesLocalC...')
+#4 /var/www/cakephp2/lib/Cake/Model/Model.php(3254): Model->__get('UserSitesLocalC...')
+#5 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(1596): Model->joinModel('UserSitesLocalC...', Array)
+#6 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(1071): DboSource->generateAssociationQuery(Object(UserSite), Object(LocalCitation), 'hasAndBelongsTo...', 'LocalCitation', Array, Array, false, NULL)
+#7 /var/www/cakephp2/lib/Cake/Model/Model.php(2637): DboSource->read(Object(UserSite), Array)
+#8 /var/www/cakephp2/lib/Cake/Model/Model.php(1520): Model->find('first', Array)
+#9 /var/www/git/submitmelocal/app/Controller/UsersController.php(61): Model->read()
+#10 [internal function]: UsersController->register('2')
+#11 /var/www/cakephp2/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#12 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-03-31 21:07:19 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 21:08:01 Error: [MissingTableException] Table user_sites_local_citations for model UserSitesLocalCitation was not found in datasource default.
+#0 /var/www/cakephp2/lib/Cake/Model/Model.php(3186): Model->setSource('user_sites_loca...')
+#1 /var/www/cakephp2/lib/Cake/Model/Model.php(1305): Model->getDataSource()
+#2 /var/www/cakephp2/lib/Cake/Model/Model.php(851): Model->schema()
+#3 /var/www/cakephp2/lib/Cake/Model/Model.php(876): Model->__isset('UserSitesLocalC...')
+#4 /var/www/cakephp2/lib/Cake/Model/Model.php(3254): Model->__get('UserSitesLocalC...')
+#5 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(1596): Model->joinModel('UserSitesLocalC...', Array)
+#6 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(1071): DboSource->generateAssociationQuery(Object(UserSite), Object(LocalCitation), 'hasAndBelongsTo...', 'LocalCitation', Array, Array, false, NULL)
+#7 /var/www/cakephp2/lib/Cake/Model/Model.php(2637): DboSource->read(Object(UserSite), Array)
+#8 /var/www/cakephp2/lib/Cake/Model/Model.php(1520): Model->find('first', Array)
+#9 /var/www/git/submitmelocal/app/Controller/UsersController.php(61): Model->read()
+#10 [internal function]: UsersController->register('2')
+#11 /var/www/cakephp2/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#12 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-03-31 21:08:34 Error: [MissingTableException] Table user_sites_local_citations for model UserSitesLocalCitation was not found in datasource default.
+#0 /var/www/cakephp2/lib/Cake/Model/Model.php(3186): Model->setSource('user_sites_loca...')
+#1 /var/www/cakephp2/lib/Cake/Model/Model.php(1305): Model->getDataSource()
+#2 /var/www/cakephp2/lib/Cake/Model/Model.php(851): Model->schema()
+#3 /var/www/cakephp2/lib/Cake/Model/Model.php(876): Model->__isset('UserSitesLocalC...')
+#4 /var/www/cakephp2/lib/Cake/Model/Model.php(3254): Model->__get('UserSitesLocalC...')
+#5 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(1596): Model->joinModel('UserSitesLocalC...', Array)
+#6 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(1071): DboSource->generateAssociationQuery(Object(UserSite), Object(LocalCitation), 'hasAndBelongsTo...', 'LocalCitation', Array, Array, false, NULL)
+#7 /var/www/cakephp2/lib/Cake/Model/Model.php(2637): DboSource->read(Object(UserSite), Array)
+#8 /var/www/cakephp2/lib/Cake/Model/Model.php(1520): Model->find('first', Array)
+#9 /var/www/git/submitmelocal/app/Controller/UsersController.php(61): Model->read()
+#10 [internal function]: UsersController->register('2')
+#11 /var/www/cakephp2/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#12 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-03-31 21:09:13 Error: [MissingTableException] Table user_sites_local_citations for model UserSitesLocalCitation was not found in datasource default.
+#0 /var/www/cakephp2/lib/Cake/Model/Model.php(3186): Model->setSource('user_sites_loca...')
+#1 /var/www/cakephp2/lib/Cake/Model/Model.php(1305): Model->getDataSource()
+#2 /var/www/cakephp2/lib/Cake/Model/Model.php(851): Model->schema()
+#3 /var/www/cakephp2/lib/Cake/Model/Model.php(876): Model->__isset('UserSitesLocalC...')
+#4 /var/www/cakephp2/lib/Cake/Model/Model.php(3254): Model->__get('UserSitesLocalC...')
+#5 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(1596): Model->joinModel('UserSitesLocalC...', Array)
+#6 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(1071): DboSource->generateAssociationQuery(Object(UserSite), Object(LocalCitation), 'hasAndBelongsTo...', 'LocalCitation', Array, Array, false, NULL)
+#7 /var/www/cakephp2/lib/Cake/Model/Model.php(2637): DboSource->read(Object(UserSite), Array)
+#8 /var/www/cakephp2/lib/Cake/Model/Model.php(1520): Model->find('first', Array)
+#9 /var/www/git/submitmelocal/app/Controller/UsersController.php(61): Model->read()
+#10 [internal function]: UsersController->register('2')
+#11 /var/www/cakephp2/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#12 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-03-31 21:17:10 Error: [MissingTableException] Table user_sites_local_citations for model UserSitesLocalCitation was not found in datasource default.
+#0 /var/www/cakephp2/lib/Cake/Model/Model.php(3186): Model->setSource('user_sites_loca...')
+#1 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(1066): Model->getDataSource()
+#2 /var/www/cakephp2/lib/Cake/Model/Model.php(2637): DboSource->read(Object(UserSite), Array)
+#3 /var/www/cakephp2/lib/Cake/Model/Model.php(1520): Model->find('first', Array)
+#4 /var/www/git/submitmelocal/app/Controller/UsersController.php(61): Model->read()
+#5 [internal function]: UsersController->register('2')
+#6 /var/www/cakephp2/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-03-31 21:17:48 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'UserSitesLocalCitation'
+#0 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('SELECT `UserSit...', Array)
+#2 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT `UserSit...', Array, Array)
+#3 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(1252): DboSource->fetchAll('SELECT `UserSit...', false)
+#4 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(1115): DboSource->queryAssociation(Object(UserSite), Object(UserSitesLocalCitation), 'hasAndBelongsTo...', 'UserSitesLocalC...', Array, Array, true, Array, 0, Array)
+#5 /var/www/cakephp2/lib/Cake/Model/Model.php(2637): DboSource->read(Object(UserSite), Array)
+#6 /var/www/cakephp2/lib/Cake/Model/Model.php(1520): Model->find('first', Array)
+#7 /var/www/git/submitmelocal/app/Controller/UsersController.php(61): Model->read()
+#8 [internal function]: UsersController->register('2')
+#9 /var/www/cakephp2/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#10 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-31 21:19:09 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'UserSitesLocalCitation'
+#0 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('SELECT `UserSit...', Array)
+#2 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT `UserSit...', Array, Array)
+#3 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(1252): DboSource->fetchAll('SELECT `UserSit...', false)
+#4 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(1115): DboSource->queryAssociation(Object(UserSite), Object(UserSitesLocalCitation), 'hasAndBelongsTo...', 'UserSitesLocalC...', Array, Array, true, Array, 0, Array)
+#5 /var/www/cakephp2/lib/Cake/Model/Model.php(2637): DboSource->read(Object(UserSite), Array)
+#6 /var/www/cakephp2/lib/Cake/Model/Model.php(1520): Model->find('first', Array)
+#7 /var/www/git/submitmelocal/app/Controller/UsersController.php(61): Model->read()
+#8 [internal function]: UsersController->register('2')
+#9 /var/www/cakephp2/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#10 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-31 21:19:37 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'UserSitesLocalCitation'
+#0 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('SELECT `UserSit...', Array)
+#2 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT `UserSit...', Array, Array)
+#3 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(1252): DboSource->fetchAll('SELECT `UserSit...', false)
+#4 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(1115): DboSource->queryAssociation(Object(UserSite), Object(UserSitesLocalCitation), 'hasAndBelongsTo...', 'UserSitesLocalC...', Array, Array, true, Array, 0, Array)
+#5 /var/www/cakephp2/lib/Cake/Model/Model.php(2637): DboSource->read(Object(UserSite), Array)
+#6 /var/www/cakephp2/lib/Cake/Model/Model.php(1520): Model->find('first', Array)
+#7 /var/www/git/submitmelocal/app/Controller/UsersController.php(61): Model->read()
+#8 [internal function]: UsersController->register('2')
+#9 /var/www/cakephp2/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#10 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-31 21:23:51 Error: Fatal Error (64): Cannot redeclare UserSite::$hasMany in [/var/www/git/submitmelocal/app/Model/UserSite.php, line 131]
+2013-03-31 21:23:51 Error: [FatalErrorException] Cannot redeclare UserSite::$hasMany
+#0 /var/www/cakephp2/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/var/www/git/su...', 131)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', '/var/www/git/su...', 131, Array)
+#2 /var/www/cakephp2/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', '/var/www/git/su...', 131, Array)
+#3 /var/www/cakephp2/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-31 21:24:18 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 21:33:58 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [/var/www/git/submitmelocal/app/Model/CitationField.php, line 266]
+2013-03-31 21:33:58 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+#0 /var/www/cakephp2/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/git/su...', 266)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/git/su...', 266, Array)
+#2 /var/www/cakephp2/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/git/su...', 266, Array)
+#3 /var/www/cakephp2/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-31 21:35:20 Error: Fatal Error (1): Call to a member function validate() on a non-object in [/var/www/git/submitmelocal/app/Controller/UsersController.php, line 54]
+2013-03-31 21:35:20 Error: [FatalErrorException] Call to a member function validate() on a non-object
+#0 /var/www/cakephp2/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/git/su...', 54)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/git/su...', 54, Array)
+#2 /var/www/cakephp2/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/git/su...', 54, Array)
+#3 /var/www/cakephp2/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-31 21:35:32 Error: Fatal Error (1): Call to a member function validates() on a non-object in [/var/www/git/submitmelocal/app/Controller/UsersController.php, line 54]
+2013-03-31 21:35:32 Error: [FatalErrorException] Call to a member function validates() on a non-object
+#0 /var/www/cakephp2/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/git/su...', 54)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/git/su...', 54, Array)
+#2 /var/www/cakephp2/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/git/su...', 54, Array)
+#3 /var/www/cakephp2/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-31 22:37:25 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`submitmelocal`.`user_sites`, CONSTRAINT `fk_user_sites_users` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('INSERT INTO `su...', Array)
+#2 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(1007): DboSource->execute('INSERT INTO `su...')
+#3 /var/www/cakephp2/lib/Cake/Model/Model.php(1734): DboSource->create(Object(UserSite), Array, Array)
+#4 /var/www/git/submitmelocal/app/Controller/UsersController.php(77): Model->save(NULL)
+#5 [internal function]: UsersController->register('2')
+#6 /var/www/cakephp2/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-03-31 22:37:43 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`submitmelocal`.`user_sites`, CONSTRAINT `fk_user_sites_users` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('INSERT INTO `su...', Array)
+#2 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(1007): DboSource->execute('INSERT INTO `su...')
+#3 /var/www/cakephp2/lib/Cake/Model/Model.php(1734): DboSource->create(Object(UserSite), Array, Array)
+#4 /var/www/git/submitmelocal/app/Controller/UsersController.php(77): Model->save()
+#5 [internal function]: UsersController->register('2')
+#6 /var/www/cakephp2/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-03-31 22:38:07 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`submitmelocal`.`user_sites`, CONSTRAINT `fk_user_sites_users` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('INSERT INTO `su...', Array)
+#2 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(1007): DboSource->execute('INSERT INTO `su...')
+#3 /var/www/cakephp2/lib/Cake/Model/Model.php(1734): DboSource->create(Object(UserSite), Array, Array)
+#4 /var/www/git/submitmelocal/app/Controller/UsersController.php(75): Model->save()
+#5 [internal function]: UsersController->register('2')
+#6 /var/www/cakephp2/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-03-31 22:38:24 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 22:38:34 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`submitmelocal`.`user_sites`, CONSTRAINT `fk_user_sites_users` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('INSERT INTO `su...', Array)
+#2 /var/www/cakephp2/lib/Cake/Model/Datasource/DboSource.php(1007): DboSource->execute('INSERT INTO `su...')
+#3 /var/www/cakephp2/lib/Cake/Model/Model.php(1734): DboSource->create(Object(UserSite), Array, Array)
+#4 /var/www/git/submitmelocal/app/Controller/UsersController.php(75): Model->save()
+#5 [internal function]: UsersController->register('2')
+#6 /var/www/cakephp2/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-03-31 22:40:09 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 22:40:10 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 22:42:27 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 22:47:18 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 22:47:19 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 22:47:22 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-31 22:59:40 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-08 22:57:32 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/submitmelocal/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-08 22:58:59 Error: [MissingControllerException] Controller class AssetsController could not be found.
+#0 /var/www/git/cakephp-datatable/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-08 23:02:19 Error: [MissingControllerException] Controller class PagesController could not be found.
+#0 /var/www/git/cakephp-datatable/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-08 23:03:28 Error: [MissingControllerException] Controller class PagesController could not be found.
+#0 /var/www/git/cakephp-datatable/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-08 23:05:04 Error: [MissingControllerException] Controller class StatesController could not be found.
+#0 /var/www/git/cakephp-datatable/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-08 23:05:24 Error: Fatal Error (1): Call to a member function responseType() on a non-object in [/var/www/git/cakephp-datatable/app/Controller/StatesController.php, line 10]
+2013-05-08 23:05:24 Error: [FatalErrorException] Call to a member function responseType() on a non-object
+#0 /var/www/cakephp2/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/git/ca...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/git/ca...', 10, Array)
+#2 /var/www/cakephp2/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/git/ca...', 10, Array)
+#3 /var/www/cakephp2/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-08 23:06:41 Error: Fatal Error (1): Call to a member function responseType() on a non-object in [/var/www/git/cakephp-datatable/app/Controller/StatesController.php, line 10]
+2013-05-08 23:06:41 Error: [FatalErrorException] Call to a member function responseType() on a non-object
+#0 /var/www/cakephp2/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/git/ca...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/git/ca...', 10, Array)
+#2 /var/www/cakephp2/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/git/ca...', 10, Array)
+#3 /var/www/cakephp2/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-08 23:06:41 Error: Fatal Error (1): Call to a member function responseType() on a non-object in [/var/www/git/cakephp-datatable/app/Controller/StatesController.php, line 10]
+2013-05-08 23:06:41 Error: [FatalErrorException] Call to a member function responseType() on a non-object
+#0 /var/www/cakephp2/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/git/ca...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/git/ca...', 10, Array)
+#2 /var/www/cakephp2/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/git/ca...', 10, Array)
+#3 /var/www/cakephp2/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-08 23:06:42 Error: Fatal Error (1): Call to a member function responseType() on a non-object in [/var/www/git/cakephp-datatable/app/Controller/StatesController.php, line 10]
+2013-05-08 23:06:42 Error: [FatalErrorException] Call to a member function responseType() on a non-object
+#0 /var/www/cakephp2/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/git/ca...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/git/ca...', 10, Array)
+#2 /var/www/cakephp2/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/git/ca...', 10, Array)
+#3 /var/www/cakephp2/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-08 23:06:42 Error: Fatal Error (1): Call to a member function responseType() on a non-object in [/var/www/git/cakephp-datatable/app/Controller/StatesController.php, line 10]
+2013-05-08 23:06:42 Error: [FatalErrorException] Call to a member function responseType() on a non-object
+#0 /var/www/cakephp2/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/git/ca...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/git/ca...', 10, Array)
+#2 /var/www/cakephp2/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/git/ca...', 10, Array)
+#3 /var/www/cakephp2/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-08 23:06:42 Error: Fatal Error (1): Call to a member function responseType() on a non-object in [/var/www/git/cakephp-datatable/app/Controller/StatesController.php, line 10]
+2013-05-08 23:06:42 Error: [FatalErrorException] Call to a member function responseType() on a non-object
+#0 /var/www/cakephp2/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/git/ca...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/git/ca...', 10, Array)
+#2 /var/www/cakephp2/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/git/ca...', 10, Array)
+#3 /var/www/cakephp2/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-05-08 23:07:26 Error: [MissingPluginException] Plugin DebugKit could not be found.
+#0 /var/www/cakephp2/lib/Cake/Core/App.php(364): CakePlugin::path('DebugKit')
+#1 /var/www/cakephp2/lib/Cake/Core/App.php(225): App::pluginPath('DebugKit')
+#2 /var/www/cakephp2/lib/Cake/Core/App.php(542): App::path('Controller/Comp...', 'DebugKit')
+#3 [internal function]: App::load('ToolbarComponen...')
+#4 [internal function]: spl_autoload_call('ToolbarComponen...')
+#5 /var/www/cakephp2/lib/Cake/Controller/ComponentCollection.php(99): class_exists('ToolbarComponen...')
+#6 /var/www/cakephp2/lib/Cake/Controller/ComponentCollection.php(52): ComponentCollection->load('DebugKit.Toolba...', Array)
+#7 /var/www/cakephp2/lib/Cake/Controller/Controller.php(634): ComponentCollection->init(Object(StatesController))
+#8 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(182): Controller->constructClasses()
+#9 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(StatesController), Object(CakeRequest), Object(CakeResponse))
+#10 /var/www/git/cakephp-datatable/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-05-08 23:16:20 Error: [MissingActionException] Action StatesController::index.json() could not be found.
+#0 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(StatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/git/cakephp-datatable/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-05-08 23:16:48 Error: [MissingControllerException] Controller class Index.jsonController could not be found.
+#0 /var/www/git/cakephp-datatable/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-05-08 23:16:56 Error: [MissingActionException] Action StatesController::index.json() could not be found.
+#0 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(StatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/git/cakephp-datatable/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

@@ -1,12 +1,10 @@
 <?php
+
 /**
  * This component provides compatibility between the dataTables jQuery plugin and CakePHP 2
- * @version 1.1.0
  * @author chris
  * @package DataTableComponent
  * @link http://www.datatables.net/release-datatables/examples/server_side/server_side.html parts of code borrowed from dataTables example
-
- The MIT License (MIT)
 
 Copyright (c) 2013 Chris Nizzardini
 
@@ -27,6 +25,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
  */
 class DataTableComponent extends Component{
     
@@ -107,18 +106,17 @@ class DataTableComponent extends Component{
             $filteredTotal = $this->model->find('count',$parameters);
         }
         
-        $limit = '';
-        
         // set sql limits
         if( isset($this->controller->request->query['iDisplayStart']) && $this->controller->request->query['iDisplayLength'] != '-1' ){
             $start = $this->controller->request->query['iDisplayStart'];
             $length = $this->controller->request->query['iDisplayLength'];
-            $parameters['limit'] = $limit = "$start,$length";
+            $parameters['limit'] = $length;
+            $parameters['page'] = ($start/$length)+1;
         }
         
         // execute sql select
         $data = $this->model->find('all', $parameters);
-
+        
         // dataTables compatible array
         $response = array(
             'sEcho' => isset($this->controller->request->query['sEcho']) ? intval($this->controller->request->query['sEcho']) : 1,
@@ -266,9 +264,9 @@ class DataTableComponent extends Component{
         foreach($data as $x => $i){
             // go recursive
             if(is_array($i)){
-                if(!array_key_exists($x,$this->model->hasMany)){
+                //if(!array_key_exists($x,$this->model->hasMany)){
                     $fields = array_merge($fields,$this->getDataRecursively($i,$x));
-                }
+                //}
             }
             // check if component was given fields explicitely
             else if( !empty($this->fields) ){

@@ -43,9 +43,20 @@
               Logged in as <a href="#" class="navbar-link">Username</a>
             </p> -->
             <ul class="nav">
-              <li><a href="/">Using Linkable</a></li>
-              <li><a href="/">Using Containable</a></li>
-                          </ul>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Examples
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><a href="/">Linkable</a></li>
+                      <li><a href="/">Containable</a></li>
+                      <li><a href="/">CONCAT</a></li>
+                      <li><a href="/">VirtualFields</a></li>
+                  </ul>
+                </li>
+                <li><a href="#README" data-toggle="modal">README</a></li>
+            </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
@@ -56,9 +67,28 @@
 
 			<?php echo $this->fetch('content'); ?>
         </div>
+        <p><strong>Your are using CakePHP Version <?=Configure::version()?></strong></p>
 	</div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script src="/js/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
     <script src="/js/examples.js"></script>
+    <div class="modal hide" id="README">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>README</h3>
+      </div>
+      <div class="modal-body">
+        <p><a href="https://github.com/cnizzdotcom/cakephp-datatable">GitHub Project and Project Documentation/ReadMe</a></p>
+        <p><a href="http://blog.cnizz.com/2013/01/31/cakephp-datatables-a-component-for-interoperability-between-cakephp-and-jquery-datatables/">My Blog Post on the Project</a></p>
+        <p><a href="http://www.twitter.com/cnizzdotcom">Follow Me on Twitter</a></p>
+        <p><strong>Other Stuff</strong></p>
+        <p>Review the code to see how I did everything. Code can easily be found in the controllers, views, and webroot/js. For some funky 
+        reason CakePHP changed how LIMITS work in CakePHP 2.3.5. So this is only known to work with Cake 2.0 - 2.3.1. I will do a release to 
+        deal with whatever the Cake Devs changed or please feel free to help me out!
+        If you need help with this submit an issue, ask me on twitter, or comment on my blog post. Thanks for downloading!</p>
+        <p><strong>Your are using CakePHP Version <?=Configure::version()?></strong></p>
+      </div>
+    </div>
 </body>
 </html>

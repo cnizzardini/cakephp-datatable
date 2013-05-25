@@ -954,3 +954,12 @@
 #1 /var/www/cakephp2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(StatesController), Object(CakeRequest), Object(CakeResponse))
 #2 /var/www/git/cakephp-datatable/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2013-05-24 18:22:47 Error: [MissingControllerException] Controller class StatesController could not be found.
+Exception Attributes: array (
+  'class' => 'StatesController',
+  'plugin' => NULL,
+)
+Request URL: /
+Stack Trace:
+#0 /var/www/git/cakephp-datatable/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

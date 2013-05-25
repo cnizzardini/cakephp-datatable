@@ -130,22 +130,18 @@ class DataTableComponent extends Component{
  */
     private function getOrderByStatements(){
         
-        if( !isset($this->controller->paginate['fields']) && !empty($this->controller->paginate['contain']) && empty($this->fields) ){
-            throw new Exception("Missing field and/or contain option in Paginate. Please set the fields so I know what to order by.");
+        if( !isset($this->controller->paginate['fields']) && empty($this->fields) ){
+            throw new Exception("Missing fields option in Paginate. Please set the fields so I know what to order by.");
         }
         
         $orderBy = '';
         
         $fields = !empty($this->fields) ? $this->fields : $this->controller->paginate['fields'];
         
-        // loop through sorting columbns in GET
-        //for ( $i=0 ; $i<intval( $this->controller->request->query['iSortingCols'] ) ; $i++ ){
-            // if column is found in paginate fields list then add to $orderBy
-            if( !empty($fields) && isset($this->controller->request->query['iSortCol_0']) ){
-                $direction = $this->controller->request->query['sSortDir_0'] === 'asc' ? 'asc' : 'desc';
-                $orderBy = $fields[ $this->controller->request->query['iSortCol_0'] ].' '.$direction.', ';
-            }
-        //}
+        if( !empty($fields) && isset($this->controller->request->query['iSortCol_0']) ){
+            $direction = $this->controller->request->query['sSortDir_0'] === 'asc' ? 'asc' : 'desc';
+            $orderBy = $fields[ $this->controller->request->query['iSortCol_0'] ].' '.$direction.', ';
+        }
         
         if(!empty($orderBy)){
             return substr($orderBy,0, -2);

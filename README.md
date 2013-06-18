@@ -26,6 +26,15 @@ Demo
 ------
 http://cakephpdatatables.cnizz.com/
 
+You can setup the demo locally with the following steps:
+
+1. Download demo application and move it into your webroot.
+2. Configure hosts and sites-enabled in apache to point at the location of demo application and setup the local hostname (ie datatables.local)
+3. Create a database (call this datatables)
+4. Configure database.php 
+5. From the shell run Console/cake schema create
+6. Import app/Config/Schema/schema.sql into your database
+7. Ensure your app/tmp directory and app/tmp sub directories are writable
 
 Documentation
 ------

@@ -36,6 +36,8 @@ You can setup the demo locally with the following steps:
 6. Import app/Config/Schema/schema.sql into your database
 7. Ensure your app/tmp directory and app/tmp sub directories are writable
 
+The demo application is designed for CakePHP 2.3 and was built on Ubuntu 12.10 running Apache2 with PHP 5.4. It does not have the full Cake framework in it, so you'll need to have cakephp in your php include paths or create a symbolic link to cake in test. 
+
 Documentation
 ------
 
@@ -125,12 +127,6 @@ can be accomplished with the following parameters:
 ```php
 $this->DataTable->getResponse(null,$this->Order);
 ```
-
-Demo Application
-------
-The demo application is designed for CakePHP 2.3 and was built on Ubuntu 12.10 running Apache2 with PHP 5.4. Place test in your web. It does not 
-have the full Cake framework in it, so you'll need to have cakephp in your php include paths or create a symbolic link to cake in test. There is 
-a schema associated with this, for instructions on building schema review http://book.cakephp.org/2.0/en/console-and-shells/schema-management-and-migrations.html There is also a sql file in app/Config/Schema/schema.sql that you can run as well.
 
 Updates
 ------

@@ -77,8 +77,12 @@ class DataTableComponent extends Component{
             $isFiltered = true;
         }
         
+        if(isset($this->controller->request->query)){
+            $httpGet = $this->controller->request->query;
+        }
+        
         // check for ORDER BY in GET request
-        if(isset($this->controller->request->query) && isset($this->controller->request->query['iSortCol_0'])){
+        if(isset($httpGet) && isset($httpGet['iSortCol_0']) && $httpGet['sEcho'] != 1){
             $orderBy = $this->getOrderByStatements();
             if(!empty($orderBy)){
                 $this->controller->paginate = array_merge($this->controller->paginate, array('order'=>$orderBy));
@@ -86,7 +90,7 @@ class DataTableComponent extends Component{
         }
         
         // check for WHERE statement in GET request
-        if(isset($this->controller->request->query) && !empty($this->controller->request->query['sSearch'])){
+        if(isset($httpGet) && !empty($httpGet['sSearch'])){
             $conditions = $this->getWhereConditions();
 
             if( !empty($this->controller->paginate['contain']) ){

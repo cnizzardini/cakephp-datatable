@@ -5,7 +5,7 @@
  * @author chris
  * @package DataTableComponent
  * @link http://www.datatables.net/release-datatables/examples/server_side/server_side.html parts of code borrowed from dataTables example
- * @since version 1.1.0
+ * @since version 1.1.1
 Copyright (c) 2013 Chris Nizzardini
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -106,6 +106,7 @@ class DataTableComponent extends Component{
         $this->setTimes('Count All','start','Counts all records in the table');
         // @todo avoid multiple queries for finding count, maybe look into "SQL CALC FOUND ROWS"
         // get full count
+        $this->model->recursive = -1;
         $total = $this->model->find('count');
         $this->setTimes('Count All','stop');
         $this->setTimes('Filtered Count','start','Counts records that match conditions');

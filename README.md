@@ -17,6 +17,18 @@ Dependancies
 * CakePHP 2.x
 * LinkableBehavior is recommended but not required
 
+Updates
+------
+* Nov 1, 2013 - Improved performance of table count by setting model->recursive = -1 on count queries
+* May 25, 2013 - added full demo under test. Resolved some bugs dealing with SQL LIMITS and cleared up some error handling.
+* March 28, 2013 - added initialize method. It use to be that you had to pass in a reference to the Controller and Model when calling getResponse. This is no longer required.
+```php
+// old way
+$this->DataTable->getResponse($this->OrdersController,$this->Order);
+// new way
+$this->DataTable->getResponse();
+```
+
 Installation
 ------
 
@@ -126,17 +138,6 @@ Using models from other controllers. Sometimes the case may be that you are in a
 can be accomplished with the following parameters:
 ```php
 $this->DataTable->getResponse(null,$this->Order);
-```
-
-Updates
-------
-May 25, 2013 - added full demo under test. Resolved some bugs dealing with SQL LIMITS and cleared up some error handling.
-March 28, 2013 - added initialize method. It use to be that you had to pass in a reference to the Controller and Model when calling getResponse. This is no longer required.
-```php
-// old way
-$this->DataTable->getResponse($this->OrdersController,$this->Order);
-// new way
-$this->DataTable->getResponse();
 ```
 
 Licensing

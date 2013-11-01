@@ -5,7 +5,7 @@
  * @author chris
  * @package DataTableComponent
  * @link http://www.datatables.net/release-datatables/examples/server_side/server_side.html parts of code borrowed from dataTables example
- * @since version 1.1.0
+ * @since version 1.1.1
 Copyright (c) 2013 Chris Nizzardini
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,6 +30,7 @@ class DataTableComponent extends Component{
     
     private $model;
     private $controller;
+    private $times = array();
     public $conditionsByValidate = 0;
     public $emptyElements = 0;
     public $fields = array();
@@ -56,6 +57,8 @@ class DataTableComponent extends Component{
          * a CustomerController but your method is displaying data from an OrdersModel.
          */
         
+        $this->setTimes('Pre','start','Preproccessing of conditions');
+        
         if($model != null){  
             if(is_string($model)){
                 $this->model = $this->controller->{$model};
@@ -74,8 +77,12 @@ class DataTableComponent extends Component{
             $isFiltered = true;
         }
         
+        if(isset($this->controller->request->query)){
+            $httpGet = $this->controller->request->query;
+        }
+        
         // check for ORDER BY in GET request
-        if(isset($this->controller->request->query) && isset($this->controller->request->query['iSortCol_0'])){
+        if(isset($httpGet) && isset($httpGet['iSortCol_0']) && $httpGet['sEcho'] != 1){
             $orderBy = $this->getOrderByStatements();
             if(!empty($orderBy)){
                 $this->controller->paginate = array_merge($this->controller->paginate, array('order'=>$orderBy));
@@ -83,7 +90,7 @@ class DataTableComponent extends Component{
         }
         
         // check for WHERE statement in GET request
-        if(isset($this->controller->request->query) && !empty($this->controller->request->query['sSearch'])){
+        if(isset($httpGet) && !empty($httpGet['sSearch'])){
             $conditions = $this->getWhereConditions();
 
             if( !empty($this->controller->paginate['contain']) ){
@@ -95,27 +102,34 @@ class DataTableComponent extends Component{
             $isFiltered = true;
         }
         
+        $this->setTimes('Pre','stop');
+        $this->setTimes('Count All','start','Counts all records in the table');
         // @todo avoid multiple queries for finding count, maybe look into "SQL CALC FOUND ROWS"
         // get full count
+        $this->model->recursive = -1;
         $total = $this->model->find('count');
-        
+        $this->setTimes('Count All','stop');
+        $this->setTimes('Filtered Count','start','Counts records that match conditions');
         $parameters = $this->controller->paginate;
         
         if($isFiltered){
             $filteredTotal = $this->model->find('count',$parameters);
         }
+        $this->setTimes('Filtered Count','stop');
+        $this->setTimes('Find','start','Cake Find');
+        $limit = '';
         
         // set sql limits
         if( isset($this->controller->request->query['iDisplayStart']) && $this->controller->request->query['iDisplayLength'] != '-1' ){
             $start = $this->controller->request->query['iDisplayStart'];
             $length = $this->controller->request->query['iDisplayLength'];
-            $parameters['limit'] = $length;
-            $parameters['page'] = ($start/$length)+1;
+            $parameters['limit'] = $limit = "$start,$length";
         }
         
         // execute sql select
         $data = $this->model->find('all', $parameters);
-        
+        $this->setTimes('Find','stop');
+        $this->setTimes('Response','start','Formatting of response');
         // dataTables compatible array
         $response = array(
             'sEcho' => isset($this->controller->request->query['sEcho']) ? intval($this->controller->request->query['sEcho']) : 1,
@@ -139,7 +153,7 @@ class DataTableComponent extends Component{
                 $response['aaData'][] = array_values($tmp);
             }
         }
-        
+        $this->setTimes('Response','stop');
         return $response;
     }
     
@@ -150,18 +164,22 @@ class DataTableComponent extends Component{
  */
     private function getOrderByStatements(){
         
-        if( !isset($this->controller->paginate['fields']) && empty($this->fields) ){
-            throw new Exception("Missing fields option in Paginate. Please set the fields so I know what to order by.");
+        if( !isset($this->controller->paginate['fields']) && !empty($this->controller->paginate['contain']) && empty($this->fields) ){
+            throw new Exception("Missing field and/or contain option in Paginate. Please set the fields so I know what to order by.");
         }
         
         $orderBy = '';
         
         $fields = !empty($this->fields) ? $this->fields : $this->controller->paginate['fields'];
         
-        if( !empty($fields) && isset($this->controller->request->query['iSortCol_0']) ){
-            $direction = $this->controller->request->query['sSortDir_0'] === 'asc' ? 'asc' : 'desc';
-            $orderBy = $fields[ $this->controller->request->query['iSortCol_0'] ].' '.$direction.', ';
-        }
+        // loop through sorting columbns in GET
+        //for ( $i=0 ; $i<intval( $this->controller->request->query['iSortingCols'] ) ; $i++ ){
+            // if column is found in paginate fields list then add to $orderBy
+            if( !empty($fields) && isset($this->controller->request->query['iSortCol_0']) ){
+                $direction = $this->controller->request->query['sSortDir_0'] === 'asc' ? 'asc' : 'desc';
+                $orderBy = $fields[ $this->controller->request->query['iSortCol_0'] ].' '.$direction.', ';
+            }
+        //}
         
         if(!empty($orderBy)){
             return substr($orderBy,0, -2);
@@ -292,5 +310,59 @@ class DataTableComponent extends Component{
         //var_dump($fields);
         return $fields;
     }
+    
+/**
+ * setTimes method - adds to timer of settings[timed] = true
+ * @param string $key
+ * @param string $action (start or stop)
+ * @param string $desc (optional)
+ * @param string $line
+ */    
+    private function setTimes($key,$action,$desc=''){
+        if(isset($this->settings) && isset($this->settings['timer']) && $this->settings['timer'] == true){
+            $this->times[$key][$action] = array(
+                'action' => $action,
+                'time' => microtime(true),
+                'description' => $desc
+            );
+        }
+    }
+    
+/**
+ * getTimes method - returns an array of the components benchmarks
+ * @return type
+ */    
+    public function getTimes(){
+        $times = array();
+        $componentStart = 0;
+        foreach($this->times as $x => $i){
+            $start = $end = $desc = $startLine = $endLine = 0;
+            foreach($i as $j){
+                if($j['action'] == 'start'){
+                    $start = $j['time'];
+                    $desc = $j['description'];
+                    if($componentStart == 0){
+                        $componentStart = $start;
+                    }
+                }
+                else if($j['action'] == 'stop'){
+                    $end = $j['time'];
+                }
+                if($start > 0 && $end > 0){
+                    $times[$x] = array(
+                        'description' => $desc,
+                        'time' => round(($end - $start),4),
+                    );
+                }
+            }
+        }
         
+        if(isset($this->settings) && isset($this->settings['timer']) && $this->settings['timer'] == true){
+            $times['TOTAL'] = array(
+                'time' => round(($end - $componentStart),4)
+            );
+        }
+        
+        return $times;
+    }
 }

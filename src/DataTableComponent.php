@@ -123,7 +123,8 @@ class DataTableComponent extends Component{
         if( isset($this->controller->request->query['iDisplayStart']) && $this->controller->request->query['iDisplayLength'] != '-1' ){
             $start = $this->controller->request->query['iDisplayStart'];
             $length = $this->controller->request->query['iDisplayLength'];
-            $parameters['limit'] = $limit = "$start,$length";
+            $parameters['offset'] = $start;
+            $parameters['limit'] = $length;
         }
         
         // execute sql select

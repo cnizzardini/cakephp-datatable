@@ -208,37 +208,39 @@ class DataTableComponent extends Component{
         foreach($fields as $x => $column){
             
             // only create conditions on bSearchable fields
-            if( $this->controller->request->query['bSearchable_'.$x] == 'true' ){
+           if (isset($this->controller->request->query['bSearchable_'.$x])) { // check if the parameter exists in query.
+                if( $this->controller->request->query['bSearchable_'.$x] == 'true' ){
 
-                list($table, $field) = explode('.', $column);
-                
-                // attempt using definitions in $model->validate to build intelligent conditions
-                if( $this->conditionsByValidate == 1 && array_key_exists($column,$this->model->validate) ){
-
-                    if( !empty($this->controller->paginate['contain']) ){
-                        if(array_key_exists($table, $this->controller->paginate['contain']) && in_array($field, $this->controller->paginate['contain'][$table]['fields'])){
-                            $conditions[$table]['conditions'][] = $this->conditionByDataType($column);
-                        }
-                    }
-                    else{
-                        $conditions['OR'][] = $this->conditionByDataType($column);
-                    }
-                }
-                else{
+                    list($table, $field) = explode('.', $column);
                     
-                    if( !empty($this->controller->paginate['contain']) ){
+                    // attempt using definitions in $model->validate to build intelligent conditions
+                    if( $this->conditionsByValidate == 1 && array_key_exists($column,$this->model->validate) ){
 
-                        if(array_key_exists($table, $this->controller->paginate['contain']) && in_array($field, $this->controller->paginate['contain'][$table]['fields'])){
-                            $conditions[$table]['conditions'][] = $column.' LIKE "%'.$this->controller->request->query['sSearch'].'%"';
+                        if( !empty($this->controller->paginate['contain']) ){
+                            if(array_key_exists($table, $this->controller->paginate['contain']) && in_array($field, $this->controller->paginate['contain'][$table]['fields'])){
+                                $conditions[$table]['conditions'][] = $this->conditionByDataType($column);
+                            }
+                        }
+                        else{
+                            $conditions['OR'][] = $this->conditionByDataType($column);
                         }
                     }
                     else{
-                        $conditions['OR'][] = array(
-                            $column.' LIKE' => '%'.$this->controller->request->query['sSearch'].'%'
-                        );
+                        
+                        if( !empty($this->controller->paginate['contain']) ){
+
+                            if(array_key_exists($table, $this->controller->paginate['contain']) && in_array($field, $this->controller->paginate['contain'][$table]['fields'])){
+                                $conditions[$table]['conditions'][] = $column.' LIKE "%'.$this->controller->request->query['sSearch'].'%"';
+                            }
+                        }
+                        else{
+                            $conditions['OR'][] = array(
+                                $column.' LIKE' => '%'.$this->controller->request->query['sSearch'].'%'
+                            );
+                        }
                     }
                 }
-            }
+            } 
         }
         return $conditions;
     }

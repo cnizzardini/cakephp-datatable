@@ -35,6 +35,10 @@ class DataTableComponent extends Component{
     public $emptyElements = 0;
     public $fields = array();
     
+    public function __construct(){
+        
+    }
+    
     public function initialize(Controller $controller){
         $this->controller = $controller;
         $modelName = $this->controller->modelClass;
@@ -117,17 +121,18 @@ class DataTableComponent extends Component{
         }
         $this->setTimes('Filtered Count','stop');
         $this->setTimes('Find','start','Cake Find');
-        $limit = '';
         
         // set sql limits
         if( isset($this->controller->request->query['iDisplayStart']) && $this->controller->request->query['iDisplayLength'] != '-1' ){
             $start = $this->controller->request->query['iDisplayStart'];
             $length = $this->controller->request->query['iDisplayLength'];
-            $parameters['limit'] = $limit = "$start,$length";
+            $parameters['limit'] = $length;
+            $parameters['offset'] = $start;
         }
         
         // execute sql select
         $data = $this->model->find('all', $parameters);
+
         $this->setTimes('Find','stop');
         $this->setTimes('Response','start','Formatting of response');
         // dataTables compatible array

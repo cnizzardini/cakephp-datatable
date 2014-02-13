@@ -19,6 +19,7 @@ Dependancies
 
 Updates
 ------
+* Feb 13, 2014 (v1.1.2) - Updated to support LIMIT and OFFSET parameters in newer versions of CakePHP
 * Nov 1, 2013 (v1.1.1) - Improved performance of table count by setting model->recursive = -1 on count queries
 * May 25, 2013 - added full demo under test. Resolved some bugs dealing with SQL LIMITS and cleared up some error handling.
 * March 28, 2013 - added initialize method. It use to be that you had to pass in a reference to the Controller and Model when calling getResponse. This is no longer required.

@@ -19,6 +19,7 @@ Dependancies
 
 Updates
 ------
+* Mar 14, 2014 (v1.2.0) - Added support for mDataProp 
 * Feb 13, 2014 (v1.1.2) - Updated to support LIMIT and OFFSET parameters in newer versions of CakePHP
 * Nov 1, 2013 (v1.1.1) - Improved performance of table count by setting model->recursive = -1 on count queries
 * May 25, 2013 - added full demo under test. Resolved some bugs dealing with SQL LIMITS and cleared up some error handling.
@@ -138,6 +139,17 @@ The Component respects many of the options you can define within jQuery DataTabl
 Using models from other controllers. Sometimes the case may be that you are in a CustomersController and you have a method within that wants to display data from another model such as an Order model. This 
 can be accomplished with the following parameters:
 ```php
+$this->DataTable->getResponse(null,$this->Order);
+```
+
+Using mData
+
+New in v1.2.0 is support for mData. When I originally wrote this component I didn't realize that dataTables supported 
+strings for indexes (such as aData.User.name instead of aData[1]). This functionality is off by default (for now). To 
+enable this parameter set your mData properties in your JS code (https://datatables.net/usage/columns) and in your 
+server side code set DataTable->mDataProp = true just before calling getResponse.
+```php
+$this->DataTable->mDataProp = true;
 $this->DataTable->getResponse(null,$this->Order);
 ```
 

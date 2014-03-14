@@ -150,7 +150,7 @@ enable this parameter set your mData properties in your JS code (https://datatab
 server side code set DataTable->mDataProp = true just before calling getResponse.
 ```php
 $this->DataTable->mDataProp = true;
-$this->DataTable->getResponse(null,$this->Order);
+$this->DataTable->getResponse();
 ```
 
 Licensing

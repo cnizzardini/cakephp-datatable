@@ -55,36 +55,11 @@ The demo application is designed for CakePHP 2.3 and was built on Ubuntu 12.10 r
 Documentation
 ------
 
+I'm in the process of enhancing documentation and moving it out of the README.
+[Basic Usage](https://github.com/cnizzdotcom/cakephp-datatable/wiki/Basic-Usage-v1.2.0)
+
 Ordering and conditions supplied via DataTables work "automagically" and nothing else is needed. Deep relations using the ContainableBehavior will break the response due to the way conditions work within that behavior. To get around this it is recommended that the LinkableBehavior be used instead. See: https://github.com/dereuromark/tools/blob/master/Model/Behavior/LinkableBehavior.php
 
-Remember of course to add the component to your controller:
-```php
-class YourController extends AppController {
-    
-    public $components = array('DataTable');
-```
-
-You should explicitly define all fields you want returned in your paginate fields. If you need to alter the order in which fields are returned set the fields attribute like so:
-```php
-$this->DataTable->fields = array('Field.A','Field.B','Field.C');
-```
-
-If you need to add empty columns to the response set the emptyElements attribute to the number of empty columns needed:
-```php
-$this->DataTable->emptyElements = 2;
-```
-
-Basic Usage:
-```php
-    $this->paginate = array(
-        'fields' => array('Field.A','Field.B', 'Field.C'),
-        'conditions' => array(
-            'active'=>1
-        )
-    );
-    $this->set('response', $this->DataTable->getResponse());
-    $this->set('_serialize','response');
-```
 
 With ContainableBehavior:
 ```php

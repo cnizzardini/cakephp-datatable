@@ -55,7 +55,7 @@ The demo application is designed for CakePHP 2.3 and was built on Ubuntu 12.10 r
 Documentation
 ------
 
-I'm in the process of enhancing documentation and moving it out of the README.
+I'm in the process of enhancing documentation and moving it out of the README  and into the [wiki](https://github.com/cnizzdotcom/cakephp-datatable/wiki/_pages).
 
 * [Installation & Setup](https://github.com/cnizzdotcom/cakephp-datatable/wiki/1.-Installation-&-Setup)
 * [Basic Usage](https://github.com/cnizzdotcom/cakephp-datatable/wiki/2.-Basic-Usage-v1.2.0)

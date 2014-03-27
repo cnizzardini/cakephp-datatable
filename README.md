@@ -79,21 +79,6 @@ With ContainableBehavior:
     $this->set('_serialize','response');
 ```
 
-With CONCAT Fields. Note once a CONCAT is used we must tell the component the order the fields should be in.
-```php
-    $this->paginate = array(
-        'fields' => array('Field.A','Field.B'),
-        'link' => array(
-            'AssocModel' => array(
-            	'fields' => array('CONCAT(User.first_name," ",User.last_name) as name')
-        	)
-        )
-    );
-    $this->DataTable->fields = array('Field.A','Field.B','0.name');
-    $this->set('response',$this->DataTable->getResponse());
-    $this->set('_serialize','response');
-```
-
 If you don't use Cakes built in REST code you can ofcourse just do the following to get the response data:
 ```php
 $this->autoRender = false;

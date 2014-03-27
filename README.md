@@ -57,8 +57,9 @@ Documentation
 
 I'm in the process of enhancing documentation and moving it out of the README.
 
-* [Basic Usage](https://github.com/cnizzdotcom/cakephp-datatable/wiki/Basic-Usage-v1.2.0)
-* [Model Associates with Linkable](https://github.com/cnizzdotcom/cakephp-datatable/wiki/Model-Associations-with-Linkable)
+* [Installation & Setup](https://github.com/cnizzdotcom/cakephp-datatable/wiki/1.-Installation-&-Setup)
+* [Basic Usage](https://github.com/cnizzdotcom/cakephp-datatable/wiki/2.-Basic-Usage-v1.2.0)
+* [Model Associates with Linkable](https://github.com/cnizzdotcom/cakephp-datatable/wiki/3.-Model-Associations-with-Linkable)
 
 Ordering and conditions supplied via DataTables work "automagically" and nothing else is needed. Deep relations using the ContainableBehavior will break the response due to the way conditions work within that behavior. To get around this it is recommended that the LinkableBehavior be used instead. See: https://github.com/dereuromark/tools/blob/master/Model/Behavior/LinkableBehavior.php
 

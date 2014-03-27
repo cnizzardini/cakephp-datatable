@@ -57,7 +57,7 @@ Documentation
 
 I'm in the process of enhancing documentation and moving it out of the README  and into the [wiki](https://github.com/cnizzdotcom/cakephp-datatable/wiki/_pages).
 
-* [Installation & Setup](https://github.com/cnizzdotcom/cakephp-datatable/wiki/1.-Installation-&-Setup)
+* [Getting Started](https://github.com/cnizzdotcom/cakephp-datatable/wiki/1.-Getting-Started)
 * [Basic Usage](https://github.com/cnizzdotcom/cakephp-datatable/wiki/2.-Basic-Usage-v1.2.0)
 * [Model Associations with Linkable](https://github.com/cnizzdotcom/cakephp-datatable/wiki/3.-Model-Associations-with-Linkable)
 

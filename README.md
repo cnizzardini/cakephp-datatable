@@ -9,7 +9,7 @@ Features
 *	Accepts dataTables ORDER BY requests
 *	Accepts dataTables WHERE conditions
 *	Accepts dataTables pagination
-*	Works LinkableBehavior and to a lesser extent Containable
+*	Works with LinkableBehavior and to a lesser extent Containable
 
 Dependancies
 ------
@@ -17,27 +17,6 @@ Dependancies
 * CakePHP 2.x
 * LinkableBehavior is recommended but not required
 
-Updates
-------
-* Mar 14, 2014 (v1.2.0) - Added support for mDataProp 
-New in v1.2.0 is support for mData. When I originally wrote this component I didn't realize that dataTables supported 
-strings for indexes (such as aData.User.name instead of aData[1]). This functionality is off by default (for now). To 
-enable this parameter set your mData properties in your JS code (https://datatables.net/usage/columns) and in your 
-server side code set DataTable->mDataProp = true just before calling getResponse.
-```php
-$this->DataTable->mDataProp = true;
-$this->DataTable->getResponse();
-```
-* Feb 13, 2014 (v1.1.2) - Updated to support LIMIT and OFFSET parameters in newer versions of CakePHP
-* Nov 1, 2013 (v1.1.1) - Improved performance of table count by setting model->recursive = -1 on count queries
-* May 25, 2013 - added full demo under test. Resolved some bugs dealing with SQL LIMITS and cleared up some error handling.
-* March 28, 2013 - added initialize method. It use to be that you had to pass in a reference to the Controller and Model when calling getResponse. This is no longer required.
-```php
-// old way
-$this->DataTable->getResponse($this->OrdersController,$this->Order);
-// new way
-$this->DataTable->getResponse();
-```
 
 Installation
 ------
@@ -65,6 +44,7 @@ Documentation
 
 I'm in the process of enhancing documentation and moving it out of the README  and into the [wiki](https://github.com/cnizzdotcom/cakephp-datatable/wiki/_pages).
 
+* [Release Notes and Updates](https://github.com/cnizzdotcom/cakephp-datatable/wiki/0.-Release-Notes-and-Updates)
 * [Getting Started](https://github.com/cnizzdotcom/cakephp-datatable/wiki/1.-Getting-Started)
 * [Basic Usage](https://github.com/cnizzdotcom/cakephp-datatable/wiki/2.-Basic-Usage-v1.2.0)
 * [Model Associations with Linkable](https://github.com/cnizzdotcom/cakephp-datatable/wiki/3.-Model-Associations-with-Linkable)

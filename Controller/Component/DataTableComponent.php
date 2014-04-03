@@ -5,7 +5,7 @@
  * @author chris
  * @package DataTableComponent
  * @link http://www.datatables.net/release-datatables/examples/server_side/server_side.html parts of code borrowed from dataTables example
- * @since version 1.1.1
+ * @since version 1.2.1
 Copyright (c) 2013 Chris Nizzardini
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

@@ -5,7 +5,7 @@
  * @author chris
  * @package DataTableComponent
  * @link http://www.datatables.net/release-datatables/examples/server_side/server_side.html parts of code borrowed from dataTables example
- * @since version 1.2.1
+ * @since version 1.1.1
 Copyright (c) 2013 Chris Nizzardini
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -216,16 +216,18 @@ class DataTableComponent extends Component{
         
         $conditions = array();
         
-        if(!empty($this->fields) || !empty($this->controller->paginate['fields']) ){
-            $fields = !empty($this->fields) ? $this->fields : $this->controller->paginate['fields'];
-        }
-        else{
-            $fields = array();
+
+        if($this->mDataProp == true){
             for($i=0;$i<$this->controller->request->query['iColumns'];$i++){
-                $fields[] = $this->controller->request->query['mDataProp_'.$i];
+                if(!isset($this->controller->request->query['bSearchable_'.$i]) || $this->controller->request->query['bSearchable_'.$i] == true){
+                    $fields[] = $this->controller->request->query['mDataProp_'.$i];
+                }
             }
         }
-        
+        else if(!empty($this->fields) || !empty($this->controller->paginate['fields']) ){
+            $fields = !empty($this->fields) ? $this->fields : $this->controller->paginate['fields'];
+        }
+
         foreach($fields as $x => $column){
             
             // only create conditions on bSearchable fields

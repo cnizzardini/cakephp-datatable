@@ -6,25 +6,25 @@
  * @package DataTableComponent
  * @link http://www.datatables.net/release-datatables/examples/server_side/server_side.html parts of code borrowed from dataTables example
  * @since version 1.2.1
-Copyright (c) 2013 Chris Nizzardini
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+ * Copyright (c) 2013 Chris Nizzardini
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
  */
 class DataTableComponent extends Component{
     
@@ -46,6 +46,20 @@ class DataTableComponent extends Component{
         $this->model = $this->controller->{$modelName};
     }
     
+/**
+ * returns true if get request has any searching conditions
+ * @param object $httpGet
+ * @return bool
+ */
+    public function whereConditions($httpGet){
+        foreach($httpGet as $request){
+            if(strpos($request,'sSearch') === false && !empty($request)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 /**
  * returns dataTables compatible array - just json_encode the resulting aray
  * @param object $controller optional
@@ -95,9 +109,8 @@ class DataTableComponent extends Component{
         }
         
         // check for WHERE statement in GET request
-        if(isset($httpGet) && !empty($httpGet['sSearch'])){
+        if(isset($httpGet) && $this->whereConditions($httpGet)){
             $conditions = $this->getWhereConditions();
-
             if( !empty($this->controller->paginate['contain']) ){
                 $this->controller->paginate = array_merge_recursive($this->controller->paginate, array('contain'=>$conditions));
             }
@@ -133,7 +146,6 @@ class DataTableComponent extends Component{
         
         // execute sql select
         $data = $this->model->find('all', $parameters);
-
         $this->setTimes('Find','stop');
         $this->setTimes('Response','start','Formatting of response');
         // dataTables compatible array
@@ -229,14 +241,21 @@ class DataTableComponent extends Component{
         }
 
         foreach($fields as $x => $column){
-            
             // only create conditions on bSearchable fields
             if( $this->controller->request->query['bSearchable_'.$x] == 'true' ){
-                
                 if($this->mDataProp == true){
-                    $conditions['OR'][] = array(
-                        $this->controller->request->query['mDataProp_'.$x].' LIKE' => '%'.$this->controller->request->query['sSearch'].'%'
-                    );                  
+                    if (!empty($this->controller->request->query['sSearch'])){
+                        $conditions['OR'][] = array(
+                            $this->controller->request->query['mDataProp_'.$x].' LIKE' => '%'.$this->controller->request->query['sSearch'].'%'
+                        );
+                    }
+                    //check if specific column (i.e. sSearch_x) is empty, add it to the query if so
+                    if(!empty($this->controller->request->query['sSearch_'.$x])){
+                        $conditions['OR'][] = array(
+                            $this->controller->request->query['mDataProp_'.$x].' LIKE' => '%'.$this->controller->request->query['sSearch_'.$x].'%'
+                        );  
+                    }                   
+         
                 }
                 else{
 
@@ -255,7 +274,6 @@ class DataTableComponent extends Component{
                         }
                     }
                     else{
-
                         if( !empty($this->controller->paginate['contain']) ){
                             if(array_key_exists($table, $this->controller->paginate['contain']) && in_array($field, $this->controller->paginate['contain'][$table]['fields'])){
                                 $conditions[$table]['conditions'][] = $column.' LIKE "%'.$this->controller->request->query['sSearch'].'%"';

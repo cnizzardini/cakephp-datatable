@@ -231,7 +231,7 @@ class DataTableComponent extends Component{
         foreach($fields as $x => $column){
             
             // only create conditions on bSearchable fields
-            if( $this->controller->request->query['bSearchable_'.$x] == 'true' ){
+             if (isset($this->controller->request->query['bSearchable_'.$x])) { // check if the parameter exists in query.
                 
                 if($this->mDataProp == true){
                     $conditions['OR'][] = array(
@@ -268,7 +268,7 @@ class DataTableComponent extends Component{
                         }
                     }
                 }
-            }
+            } 
         }
         return $conditions;
     }

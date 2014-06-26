@@ -16,15 +16,14 @@ $(function() {
         "bServerSide": true,
         "sAjaxSource": "/cities/linkable.json",
         "sDom": 'CRTfrtip',
-        "aoColumns":[
-            {bVisible: false},
-            null,
-            null,
-            null,
-            {bSortable: false, bSearchable: false},
+        "aoColumns": [
+            {mData:"City.id"},
+            {mData:"City.name"},
+            {mData:"State.name"},
+            {mData:"City.population"},
         ],
         "fnCreatedRow": function(nRow, aData, iDataIndex){
-            $('td:eq(3)', nRow).html('<button onclick="alert(\'City.id is '+aData[0]+'\')">Button</button>');
+            $('td:eq(3)', nRow).html('<button onclick="alert(\'City.id is '+aData.City.id+'\')">Button</button>');
         }
     });
     
@@ -35,15 +34,13 @@ $(function() {
         "bServerSide": true,
         "sAjaxSource": "/cities/containable.json",
         "sDom": 'CRTfrtip',
-        "aoColumns":[
-            {bVisible: false},
-            null,
-            null,
-            null,
-            {bSortable: false, bSearchable: false},
+        "aoColumns": [
+            {mData:"Preference.name"},
+            {mData:"Preference.category"},
+            {mData:"Preference.value"}
         ],
         "fnCreatedRow": function(nRow, aData, iDataIndex){
-            $('td:eq(3)', nRow).html('<button onclick="alert(\'City.id is '+aData[0]+'\')">Button</button>');
+            $('td:eq(3)', nRow).html('<button onclick="alert(\'City.id is '+aData.City.id+'\')">Button</button>');
         }
     });
     
@@ -55,14 +52,13 @@ $(function() {
         "bServerSide": true,
         "sAjaxSource": "/cities/concat.json",
         "sDom": 'CRTfrtip',
-        "aoColumns":[
-            {bVisible: false},
-            null,
-            null,
-            {bSortable: false, bSearchable: false},
+        "aoColumns": [
+            {mData:"Preference.name"},
+            {mData:"Preference.category"},
+            {mData:"Preference.value"}
         ],
         "fnCreatedRow": function(nRow, aData, iDataIndex){
-            $('td:eq(2)', nRow).html('<button onclick="alert(\'City.id is '+aData[0]+'\')">Button</button>');
+            $('td:eq(2)', nRow).html('<button onclick="alert(\'City.id is '+aData.City.id+'\')">Button</button>');
         },
         "fnInitComplete": function(){
             alert('WARNING!\n CONCAT is NOT recommended. I advise using virtualFields instead. Right now the code does not handle sorting or search on CONCATS too well');
@@ -76,14 +72,13 @@ $(function() {
         "bServerSide": true,
         "sAjaxSource": "/cities/virtualFields.json",
         "sDom": 'CRTfrtip',
-        "aoColumns":[
-            {bVisible: false},
-            null,
-            null,
-            {bSortable: false, bSearchable: false},
+        "aoColumns": [
+            {mData:"Preference.name"},
+            {mData:"Preference.category"},
+            {mData:"Preference.value"}
         ],
         "fnCreatedRow": function(nRow, aData, iDataIndex){
-            $('td:eq(2)', nRow).html('<button onclick="alert(\'City.id is '+aData[0]+'\')">Button</button>');
+            $('td:eq(2)', nRow).html('<button onclick="alert(\'City.id is '+aData.City.id+'\')">Button</button>');
         }
     });
     
@@ -94,15 +89,13 @@ $(function() {
         "bServerSide": true,
         "sAjaxSource": "/cities/noJsonHandler",
         "sDom": 'CRTfrtip',
-        "aoColumns":[
-            {bVisible: false},
-            null,
-            null,
-            null,
-            {bSortable: false, bSearchable: false},
+        "aoColumns": [
+            {mData:"Preference.name"},
+            {mData:"Preference.category"},
+            {mData:"Preference.value"}
         ],
         "fnCreatedRow": function(nRow, aData, iDataIndex){
-            $('td:eq(3)', nRow).html('<button onclick="alert(\'City.id is '+aData[0]+'\')">Button</button>');
+            $('td:eq(3)', nRow).html('<button onclick="alert(\'City.id is '+aData.City.id+'\')">Button</button>');
         }
     }); 
 });

@@ -5,26 +5,26 @@
  * @author chris
  * @package DataTableComponent
  * @link http://www.datatables.net/release-datatables/examples/server_side/server_side.html parts of code borrowed from dataTables example
- * @since version 1.1.1
-Copyright (c) 2013 Chris Nizzardini
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+ * @since version 1.2.1
+ * Copyright (c) 2013 Chris Nizzardini
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
  */
 class DataTableComponent extends Component{
     
@@ -34,6 +34,7 @@ class DataTableComponent extends Component{
     public $conditionsByValidate = 0;
     public $emptyElements = 0;
     public $fields = array();
+    public $mDataProp = false;
     
     public function __construct(){
         
@@ -45,6 +46,20 @@ class DataTableComponent extends Component{
         $this->model = $this->controller->{$modelName};
     }
     
+/**
+ * returns true if get request has any searching conditions
+ * @param object $httpGet
+ * @return bool
+ */
+    public function whereConditions($httpGet){
+        foreach($httpGet as $request){
+            if(strpos($request,'sSearch') === false && !empty($request)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 /**
  * returns dataTables compatible array - just json_encode the resulting aray
  * @param object $controller optional
@@ -94,14 +109,13 @@ class DataTableComponent extends Component{
         }
         
         // check for WHERE statement in GET request
-        if(isset($httpGet) && !empty($httpGet['sSearch'])){
+        if(isset($httpGet) && $this->whereConditions($httpGet)){
             $conditions = $this->getWhereConditions();
-
             if( !empty($this->controller->paginate['contain']) ){
                 $this->controller->paginate = array_merge_recursive($this->controller->paginate, array('contain'=>$conditions));
             }
             else{
-                $this->controller->paginate = array_merge_recursive($this->controller->paginate, array('conditions'=>$conditions));
+                $this->controller->paginate = array_merge_recursive($this->controller->paginate, array('conditions'=>array('AND'=>$conditions)));
             }
             $isFiltered = true;
         }
@@ -132,7 +146,6 @@ class DataTableComponent extends Component{
         
         // execute sql select
         $data = $this->model->find('all', $parameters);
-
         $this->setTimes('Find','stop');
         $this->setTimes('Response','start','Formatting of response');
         // dataTables compatible array
@@ -148,14 +161,17 @@ class DataTableComponent extends Component{
             return $response;
         }
         else{
-
             foreach($data as $i){
-                $tmp = $this->getDataRecursively($i);
-
-                if($this->emptyElements > 0){
-                    $tmp = array_pad($tmp,count($tmp)+$this->emptyElements,'');
+                if($this->mDataProp == true){
+                    $response['aaData'][] = $i;
                 }
-                $response['aaData'][] = array_values($tmp);
+                else{
+                    $tmp = $this->getDataRecursively($i);
+                    if($this->emptyElements > 0){
+                        $tmp = array_pad($tmp,count($tmp)+$this->emptyElements,'');
+                    }
+                    $response['aaData'][] = array_values($tmp);
+                }
             }
         }
         $this->setTimes('Response','stop');
@@ -180,7 +196,12 @@ class DataTableComponent extends Component{
         // loop through sorting columbns in GET
         //for ( $i=0 ; $i<intval( $this->controller->request->query['iSortingCols'] ) ; $i++ ){
             // if column is found in paginate fields list then add to $orderBy
-            if( !empty($fields) && isset($this->controller->request->query['iSortCol_0']) ){
+            if( $this->mDataProp == true ){
+                $direction = $this->controller->request->query['sSortDir_0'] === 'asc' ? 'asc' : 'desc';
+                $mDataProp = $this->controller->request->query['iSortCol_0'];
+                $orderBy = $this->controller->request->query['mDataProp_'.$mDataProp].' '.$direction.', ';
+            }
+            else if( !empty($fields) && isset($this->controller->request->query['iSortCol_0']) ){
                 $direction = $this->controller->request->query['sSortDir_0'] === 'asc' ? 'asc' : 'desc';
                 $orderBy = $fields[ $this->controller->request->query['iSortCol_0'] ].' '.$direction.', ';
             }
@@ -201,48 +222,71 @@ class DataTableComponent extends Component{
  */
     private function getWhereConditions(){
         
-        if( !isset($this->controller->paginate['fields']) && empty($this->fields) ){
+        if( $this->mDataProp == false && !isset($this->controller->paginate['fields']) && empty($this->fields) ){
             throw new Exception("Field list is not set. Please set the fields so I know how to build where statement.");
         }
         
         $conditions = array();
-
-        $fields = !empty($this->fields) ? $this->fields : $this->controller->paginate['fields'];
         
-        foreach($fields as $x => $column){
-            
-            // only create conditions on bSearchable fields
-            if( $this->controller->request->query['bSearchable_'.$x] == 'true' ){
 
-                list($table, $field) = explode('.', $column);
-                
-                // attempt using definitions in $model->validate to build intelligent conditions
-                if( $this->conditionsByValidate == 1 && array_key_exists($column,$this->model->validate) ){
-
-                    if( !empty($this->controller->paginate['contain']) ){
-                        if(array_key_exists($table, $this->controller->paginate['contain']) && in_array($field, $this->controller->paginate['contain'][$table]['fields'])){
-                            $conditions[$table]['conditions'][] = $this->conditionByDataType($column);
-                        }
-                    }
-                    else{
-                        $conditions['OR'][] = $this->conditionByDataType($column);
-                    }
-                }
-                else{
-                    
-                    if( !empty($this->controller->paginate['contain']) ){
-
-                        if(array_key_exists($table, $this->controller->paginate['contain']) && in_array($field, $this->controller->paginate['contain'][$table]['fields'])){
-                            $conditions[$table]['conditions'][] = $column.' LIKE "%'.$this->controller->request->query['sSearch'].'%"';
-                        }
-                    }
-                    else{
-                        $conditions['OR'][] = array(
-                            $column.' LIKE' => '%'.$this->controller->request->query['sSearch'].'%'
-                        );
-                    }
+        if($this->mDataProp == true){
+            for($i=0;$i<$this->controller->request->query['iColumns'];$i++){
+                if(!isset($this->controller->request->query['bSearchable_'.$i]) || $this->controller->request->query['bSearchable_'.$i] == true){
+                    $fields[] = $this->controller->request->query['mDataProp_'.$i];
                 }
             }
+        }
+        else if(!empty($this->fields) || !empty($this->controller->paginate['fields']) ){
+            $fields = !empty($this->fields) ? $this->fields : $this->controller->paginate['fields'];
+        }
+
+        foreach($fields as $x => $column){
+            // only create conditions on bSearchable fields
+            if (isset($this->controller->request->query['bSearchable_'.$x])) { // check if the parameter exists in query.
+                if($this->mDataProp == true){
+                    if (!empty($this->controller->request->query['sSearch'])){
+                        $conditions['OR'][] = array(
+                            $this->controller->request->query['mDataProp_'.$x].' LIKE' => '%'.$this->controller->request->query['sSearch'].'%'
+                        );
+                    }
+                    //check if specific column (i.e. sSearch_x) is empty, add it to the query if so
+                    if(!empty($this->controller->request->query['sSearch_'.$x])){
+                        $conditions['OR'][] = array(
+                            $this->controller->request->query['mDataProp_'.$x].' LIKE' => '%'.$this->controller->request->query['sSearch_'.$x].'%'
+                        );  
+                    }                   
+         
+                }
+                else{
+
+                    list($table, $field) = explode('.', $column);
+
+                    // attempt using definitions in $model->validate to build intelligent conditions
+                    if( $this->conditionsByValidate == 1 && array_key_exists($column,$this->model->validate) ){
+
+                        if( !empty($this->controller->paginate['contain']) ){
+                            if(array_key_exists($table, $this->controller->paginate['contain']) && in_array($field, $this->controller->paginate['contain'][$table]['fields'])){
+                                $conditions[$table]['conditions'][] = $this->conditionByDataType($column);
+                            }
+                        }
+                        else{
+                            $conditions['OR'][] = $this->conditionByDataType($column);
+                        }
+                    }
+                    else{
+                        if( !empty($this->controller->paginate['contain']) ){
+                            if(array_key_exists($table, $this->controller->paginate['contain']) && in_array($field, $this->controller->paginate['contain'][$table]['fields'])){
+                                $conditions[$table]['conditions'][] = $column.' LIKE "%'.$this->controller->request->query['sSearch'].'%"';
+                            }
+                        }
+                        else{
+                            $conditions['OR'][] = array(
+                                $column.' LIKE' => '%'.$this->controller->request->query['sSearch'].'%'
+                            );
+                        }
+                    }
+                }
+            } 
         }
         return $conditions;
     }

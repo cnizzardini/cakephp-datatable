@@ -35,9 +35,10 @@ $(function() {
         "sAjaxSource": "/cities/containable.json",
         "sDom": 'CRTfrtip',
         "aoColumns": [
-            {mData:"Preference.name"},
-            {mData:"Preference.category"},
-            {mData:"Preference.value"}
+            {mData:"City.id"},
+            {mData:"City.name"},
+            {mData:"State.name"},
+            {mData:"City.population"},
         ],
         "fnCreatedRow": function(nRow, aData, iDataIndex){
             $('td:eq(3)', nRow).html('<button onclick="alert(\'City.id is '+aData.City.id+'\')">Button</button>');
@@ -53,9 +54,10 @@ $(function() {
         "sAjaxSource": "/cities/concat.json",
         "sDom": 'CRTfrtip',
         "aoColumns": [
-            {mData:"Preference.name"},
-            {mData:"Preference.category"},
-            {mData:"Preference.value"}
+            {mData:"City.id"},
+            {mData:"City.name"},
+            {mData:"State.name"},
+            {mData:"City.population"},
         ],
         "fnCreatedRow": function(nRow, aData, iDataIndex){
             $('td:eq(2)', nRow).html('<button onclick="alert(\'City.id is '+aData.City.id+'\')">Button</button>');
@@ -73,9 +75,10 @@ $(function() {
         "sAjaxSource": "/cities/virtualFields.json",
         "sDom": 'CRTfrtip',
         "aoColumns": [
-            {mData:"Preference.name"},
-            {mData:"Preference.category"},
-            {mData:"Preference.value"}
+            {mData:"City.id"},
+            {mData:"City.name"},
+            {mData:"State.name"},
+            {mData:"City.population"},
         ],
         "fnCreatedRow": function(nRow, aData, iDataIndex){
             $('td:eq(2)', nRow).html('<button onclick="alert(\'City.id is '+aData.City.id+'\')">Button</button>');
@@ -90,9 +93,10 @@ $(function() {
         "sAjaxSource": "/cities/noJsonHandler",
         "sDom": 'CRTfrtip',
         "aoColumns": [
-            {mData:"Preference.name"},
-            {mData:"Preference.category"},
-            {mData:"Preference.value"}
+            {mData:"City.id"},
+            {mData:"City.name"},
+            {mData:"State.name"},
+            {mData:"City.population"},
         ],
         "fnCreatedRow": function(nRow, aData, iDataIndex){
             $('td:eq(3)', nRow).html('<button onclick="alert(\'City.id is '+aData.City.id+'\')">Button</button>');

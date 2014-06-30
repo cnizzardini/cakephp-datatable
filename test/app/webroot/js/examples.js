@@ -6,25 +6,13 @@ $(function() {
         "bProcessing": true,
         "bServerSide": true,
         "sAjaxSource": "/cities/index.json",
-        "sDom": 'CRTfrtip'
-    });
-    
-    // using linkable behavior see app/Controllers/CitiesController::linkable
-    $('#linkable').dataTable({
-        "iDisplayLength": 100,
-        "bProcessing": true,
-        "bServerSide": true,
-        "sAjaxSource": "/cities/linkable.json",
-        "sDom": 'CRTfrtip',
         "aoColumns": [
             {mData:"City.id"},
             {mData:"City.name"},
             {mData:"State.name"},
-            {mData:"City.population"},
+            {mData:"City.population"}
         ],
-        "fnCreatedRow": function(nRow, aData, iDataIndex){
-            $('td:eq(3)', nRow).html('<button onclick="alert(\'City.id is '+aData.City.id+'\')">Button</button>');
-        }
+        "sDom": 'frtip'
     });
     
     // using containable behavior see app/Controllers/CitiesController::containable
@@ -33,12 +21,12 @@ $(function() {
         "bProcessing": true,
         "bServerSide": true,
         "sAjaxSource": "/cities/containable.json",
-        "sDom": 'CRTfrtip',
+        "sDom": 'frtip',
         "aoColumns": [
             {mData:"City.id"},
             {mData:"City.name"},
             {mData:"State.name"},
-            {mData:"City.population"},
+            {mData:"City.population"}
         ],
         "fnCreatedRow": function(nRow, aData, iDataIndex){
             $('td:eq(3)', nRow).html('<button onclick="alert(\'City.id is '+aData.City.id+'\')">Button</button>');
@@ -52,12 +40,11 @@ $(function() {
         "bProcessing": true,
         "bServerSide": true,
         "sAjaxSource": "/cities/concat.json",
-        "sDom": 'CRTfrtip',
+        "sDom": 'frtip',
         "aoColumns": [
             {mData:"City.id"},
-            {mData:"City.name"},
-            {mData:"State.name"},
-            {mData:"City.population"},
+            {mData:"0.together"},
+            {mData:"State.name"}
         ],
         "fnCreatedRow": function(nRow, aData, iDataIndex){
             $('td:eq(2)', nRow).html('<button onclick="alert(\'City.id is '+aData.City.id+'\')">Button</button>');
@@ -73,15 +60,15 @@ $(function() {
         "bProcessing": true,
         "bServerSide": true,
         "sAjaxSource": "/cities/virtualFields.json",
-        "sDom": 'CRTfrtip',
+        "sDom": 'frtip',
         "aoColumns": [
             {mData:"City.id"},
-            {mData:"City.name"},
+            {mData:"City.together"},
             {mData:"State.name"},
-            {mData:"City.population"},
+            {mData:"City.population"}
         ],
         "fnCreatedRow": function(nRow, aData, iDataIndex){
-            $('td:eq(2)', nRow).html('<button onclick="alert(\'City.id is '+aData.City.id+'\')">Button</button>');
+            $('td:eq(3)', nRow).html('<button onclick="alert(\'City.id is '+aData.City.id+'\')">Button</button>');
         }
     });
     
@@ -91,15 +78,16 @@ $(function() {
         "bProcessing": true,
         "bServerSide": true,
         "sAjaxSource": "/cities/noJsonHandler",
-        "sDom": 'CRTfrtip',
+        "sDom": 'frtip',
         "aoColumns": [
             {mData:"City.id"},
             {mData:"City.name"},
             {mData:"State.name"},
             {mData:"City.population"},
+            {mData:"City.id"}
         ],
         "fnCreatedRow": function(nRow, aData, iDataIndex){
-            $('td:eq(3)', nRow).html('<button onclick="alert(\'City.id is '+aData.City.id+'\')">Button</button>');
+            $('td:eq(4)', nRow).html('<button onclick="alert(\'City.id is '+aData.City.id+'\')">Button</button>');
         }
     }); 
 });

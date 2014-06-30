@@ -1035,3 +1035,78 @@ INSERT INTO `cities` (`id`, `name`, `state_id`, `population`) VALUES
 (999, 'Carleton', 24, 0),
 (1000, 'Chelsea', 24, 4944);
 
+CREATE TABLE IF NOT EXISTS `states` (
+`id` int(2) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `abbrev` varchar(2) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=55 ;
+
+--
+-- Dumping data for table `states`
+--
+
+INSERT INTO `states` (`id`, `name`, `abbrev`) VALUES
+(1, 'Alaska', 'AK'),
+(2, 'Alabama', 'AL'),
+(3, 'Arkansas', 'AR'),
+(4, 'Arizona', 'AZ'),
+(5, 'California', 'CA'),
+(6, 'Colorado', 'CO'),
+(7, 'Connecticut', 'CT'),
+(8, 'District of Columbia', 'DC'),
+(9, 'Deleware', 'DE'),
+(10, 'Florida', 'FL'),
+(11, 'GEORGIA', 'GA'),
+(12, 'Guam', 'GU'),
+(13, 'Hawaii', 'HI'),
+(14, 'Iowa', 'IA'),
+(15, 'Idaho', 'ID'),
+(16, 'Illinois', 'IL'),
+(17, 'Indiana', 'IN'),
+(18, 'Kansas', 'KS'),
+(19, 'Kentucky', 'KY'),
+(20, 'Louisiana', 'LA'),
+(21, 'Massachusetts', 'MA'),
+(22, 'Maine', 'ME'),
+(23, 'Maryland', 'MD'),
+(24, 'Michigan', 'MI'),
+(25, 'Minnesota', 'MN'),
+(26, 'Missouri', 'MO'),
+(27, 'Mississippi', 'MS'),
+(28, 'Montana', 'MT'),
+(29, 'North Carolina', 'NC'),
+(30, 'North Dakota', 'ND'),
+(31, 'Nebraska', 'NE'),
+(32, 'New Hampshire', 'NH'),
+(33, 'New Jersey', 'NJ'),
+(34, 'New Mexico', 'NM'),
+(35, 'Nevada', 'NV'),
+(36, 'New York', 'NY'),
+(37, 'Ohio', 'OH'),
+(38, 'Oklahoma', 'OK'),
+(39, 'Oregon', 'OR'),
+(40, 'Pennsylvania', 'PA'),
+(41, 'Puerto Rico', 'PR'),
+(42, 'Rhode Island', 'RI'),
+(43, 'South Carolina', 'SC'),
+(44, 'South Dakota', 'SD'),
+(45, 'Tennessee', 'TN'),
+(46, 'Texas', 'TX'),
+(47, 'Utah', 'UT'),
+(48, 'Virginia', 'VA'),
+(49, 'Virgin Islands', 'VI'),
+(50, 'Vermont', 'VT'),
+(51, 'Washington', 'WA'),
+(52, 'Wisconsin', 'WI'),
+(53, 'West Virginia', 'WV'),
+(54, 'Wyoming', 'WY');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `states`
+--
+ALTER TABLE `states`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `abbrev` (`abbrev`);

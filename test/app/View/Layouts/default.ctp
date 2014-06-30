@@ -49,8 +49,7 @@
                     <b class="caret"></b>
                   </a>
                   <ul class="dropdown-menu">
-                      <li><a href="/cities/index">Basic</a></li>
-                      <li><a href="/cities/linkable">Linkable</a></li>
+                      <li><a href="/cities/index">Basic (Linkable)</a></li>
                       <li><a href="/cities/containable">Containable</a></li>
                       <li><a href="/cities/concat">CONCAT</a></li>
                       <li><a href="/cities/virtualFields">VirtualFields</a></li>

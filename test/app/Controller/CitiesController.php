@@ -7,26 +7,17 @@ class CitiesController extends AppController {
     
     public function index(){
         if($this->RequestHandler->responseType() == 'json') {
-            $this->paginate = array();
-            $this->DataTable->mDataProp = true;
-            $this->set('cities', $this->DataTable->getResponse());
-            $this->set('_serialize','cities');
-        }
-    }
-    
-    public function linkable(){
-        if($this->RequestHandler->responseType() == 'json') {
             $this->paginate = array(
                 'fields' => array('id', 'name', 'population'),
                 'link' => array(
                     'State' => array(
-                        'fields' => array('name')
+                        'fields' => array('id','name','abbrev')
                     )
                 )
             );
             $this->DataTable->mDataProp = true;
-            $this->set('cities', $this->DataTable->getResponse());
-            $this->set('_serialize','cities');
+            $this->set('response', $this->DataTable->getResponse());
+            $this->set('_serialize','response');
         }
     }
     
@@ -36,14 +27,31 @@ class CitiesController extends AppController {
                 'fields' => array('id', 'name', 'population'),
                 'contain' => array(
                     'State' => array(
-                        'fields' => array('name')
+                        'fields' => array('id','name','abbrev')
                     )
                 )
             );
             
             $this->DataTable->mDataProp = true;
-            $this->set('cities', $this->DataTable->getResponse());
-            $this->set('_serialize','cities');
+            $this->set('response', $this->DataTable->getResponse());
+            $this->set('_serialize','response');
+        }
+    }
+    
+    public function concat(){
+        if($this->RequestHandler->responseType() == 'json') {
+            $this->paginate = array(
+                'fields' => array('City.id', 'CONCAT(City.name," / ",City.population) as together'),
+                'link' => array(
+                    'State' => array(
+                        'fields' => array('id','name','abbrev')
+                    )
+                )
+            );
+            
+            $this->DataTable->mDataProp = true;
+            $this->set('response', $this->DataTable->getResponse());
+            $this->set('_serialize','response');
         }
     }
     
@@ -55,17 +63,17 @@ class CitiesController extends AppController {
             );
             
             $this->paginate = array(
-                'fields' => array('id','together'),
+                'fields' => array('id','together','population'),
                 'link' => array(
                     'State' => array(
-                        'fields' => array('name')
+                        'fields' => array('id','name','abbrev')
                     )
                 )
             );
             
             $this->DataTable->mDataProp = true;
-            $this->set('cities', $this->DataTable->getResponse());
-            $this->set('_serialize','cities');
+            $this->set('response', $this->DataTable->getResponse());
+            $this->set('_serialize','response');
         }
     }
     

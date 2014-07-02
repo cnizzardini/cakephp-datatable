@@ -95,7 +95,7 @@ class DataTableComponent extends Component{
         }
         
         // check for WHERE statement in GET request
-        if( isset($httpGet) && $this->isSearchable($model) == true ){
+        if(isset($httpGet) && !empty($httpGet['sSearch'])){
             $conditions = $this->getWhereConditions();
 
             if( !empty($this->controller->paginate['contain']) ){
@@ -202,22 +202,6 @@ class DataTableComponent extends Component{
         return $orderBy;
     }
 
-
-/**
- * returns true if get request has any searching conditions
- * @param object $httpGet
- * @return bool
- */
-    public function isSearchable($httpGet){
-        foreach($httpGet as $request){
-            if(strpos($request,'sSearch') === false && !empty($request)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    
 /**
  * returns sql conditions array after converting dataTables GET request into Cake style conditions
  * will only search on fields with bSearchable set to true (which is the default value for bSearchable)
@@ -232,6 +216,7 @@ class DataTableComponent extends Component{
         
         $conditions = array();
         
+
         if($this->mDataProp == true){
             for($i=0;$i<$this->controller->request->query['iColumns'];$i++){
                 if(!isset($this->controller->request->query['bSearchable_'.$i]) || $this->controller->request->query['bSearchable_'.$i] == true){
@@ -245,23 +230,13 @@ class DataTableComponent extends Component{
 
         foreach($fields as $x => $column){
             
-            // only create conditions on bSearchable fields (assume true if bSearchable is not set)
-            $bSearchable = isset($this->controller->request->query['bSearchable_'.$x]) ? $this->controller->request->query['bSearchable_'.$x] : 'true';
-            if( $bSearchable == 'true' ){
+            // only create conditions on bSearchable fields
+            if( $this->controller->request->query['bSearchable_'.$x] == 'true' ){
                 
                 if($this->mDataProp == true){
-                    // check if table-wide search term was passed over - if so then add a condition for this field
-                    if( isset($this->controller->request->query['sSearch']) && !empty($this->controller->request->query['sSearch']) ){
-                        $conditions['OR'][] = array(
-                            $this->controller->request->query['mDataProp_'.$x].' LIKE' => '%'.$this->controller->request->query['sSearch'].'%'
-                        ); 
-                    }
-                    //check if specific column (i.e. sSearch_x) is empty, add it to the query if so
-                    if( isset($this->controller->request->query['sSearch_'.$x]) && !empty($this->controller->request->query['sSearch_'.$x])){
-                        $conditions['OR'][] = array(
-                            $this->controller->request->query['mDataProp_'.$x].' LIKE' => '%'.$this->controller->request->query['sSearch_'.$x].'%'
-                        );  
-                    } 
+                    $conditions['OR'][] = array(
+                        $this->controller->request->query['mDataProp_'.$x].' LIKE' => '%'.$this->controller->request->query['sSearch'].'%'
+                    );                  
                 }
                 else{
 

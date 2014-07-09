@@ -93,9 +93,10 @@ class DataTableComponent extends Component{
                 $this->controller->paginate = array_merge($this->controller->paginate, array('order'=>$orderBy));
             }
         }
-        
+
         // check for WHERE statement in GET request
-        if( isset($httpGet) && $this->isSearchable($model) == true ){
+        if( isset($httpGet) && $this->isSearchable($httpGet) == true ){
+            
             $conditions = $this->getWhereConditions();
 
             if( !empty($this->controller->paginate['contain']) ){
@@ -209,8 +210,8 @@ class DataTableComponent extends Component{
  * @return bool
  */
     public function isSearchable($httpGet){
-        foreach($httpGet as $request){
-            if(strpos($request,'sSearch') === false && !empty($request)) {
+        foreach($httpGet as $request => $value){
+            if( preg_match('/sSearch/',$request ) && !empty($value)) {
                 return true;
             }
         }
@@ -242,7 +243,7 @@ class DataTableComponent extends Component{
         else if(!empty($this->fields) || !empty($this->controller->paginate['fields']) ){
             $fields = !empty($this->fields) ? $this->fields : $this->controller->paginate['fields'];
         }
-
+        
         foreach($fields as $x => $column){
             
             // only create conditions on bSearchable fields (assume true if bSearchable is not set)
@@ -256,6 +257,7 @@ class DataTableComponent extends Component{
                             $this->controller->request->query['mDataProp_'.$x].' LIKE' => '%'.$this->controller->request->query['sSearch'].'%'
                         ); 
                     }
+                    
                     //check if specific column (i.e. sSearch_x) is empty, add it to the query if so
                     if( isset($this->controller->request->query['sSearch_'.$x]) && !empty($this->controller->request->query['sSearch_'.$x])){
                         $conditions['OR'][] = array(

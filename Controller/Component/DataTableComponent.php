@@ -95,8 +95,8 @@ class DataTableComponent extends Component{
         }
         
         // check for WHERE statement in GET request
-        if( isset($httpGet) && $this->isSearchable($model) == true ){
-            $conditions = $this->getWhereConditions();
+        if( isset($httpGet) && $this->isSearchable($httpGet) == true ){
+            $conditions = array_merge_recursive($conditions,$this->getWhereConditions());
 
             if( !empty($this->controller->paginate['contain']) ){
                 $this->controller->paginate = array_merge_recursive($this->controller->paginate, array('contain'=>$conditions));
@@ -141,7 +141,8 @@ class DataTableComponent extends Component{
             'sEcho' => isset($this->controller->request->query['sEcho']) ? intval($this->controller->request->query['sEcho']) : 1,
             'iTotalRecords' => $total,
             'iTotalDisplayRecords' => $isFiltered === true ? $filteredTotal : $total,
-            'aaData' => array()
+            'aaData' => array(),
+            'conditions' => $conditions
         );
         
         // return data
@@ -242,7 +243,9 @@ class DataTableComponent extends Component{
         else if(!empty($this->fields) || !empty($this->controller->paginate['fields']) ){
             $fields = !empty($this->fields) ? $this->fields : $this->controller->paginate['fields'];
         }
-
+        
+        $tmp = array();
+        
         foreach($fields as $x => $column){
             
             // only create conditions on bSearchable fields (assume true if bSearchable is not set)
@@ -252,15 +255,13 @@ class DataTableComponent extends Component{
                 if($this->mDataProp == true){
                     // check if table-wide search term was passed over - if so then add a condition for this field
                     if( isset($this->controller->request->query['sSearch']) && !empty($this->controller->request->query['sSearch']) ){
-                        $conditions['OR'][] = array(
-                            $this->controller->request->query['mDataProp_'.$x].' LIKE' => '%'.$this->controller->request->query['sSearch'].'%'
-                        ); 
+                        $field = $this->controller->request->query['mDataProp_'.$x];
+                        $tmp[ $field.' LIKE' ] = '%'.$this->controller->request->query['sSearch'].'%';
                     }
                     //check if specific column (i.e. sSearch_x) is empty, add it to the query if so
                     if( isset($this->controller->request->query['sSearch_'.$x]) && !empty($this->controller->request->query['sSearch_'.$x])){
-                        $conditions['OR'][] = array(
-                            $this->controller->request->query['mDataProp_'.$x].' LIKE' => '%'.$this->controller->request->query['sSearch_'.$x].'%'
-                        );  
+                        $field = $this->controller->request->query['mDataProp_'.$x];
+                        $tmp[ $field.' LIKE' ] = '%'.$this->controller->request->query['sSearch_'.$x].'%';
                     } 
                 }
                 else{
@@ -295,6 +296,11 @@ class DataTableComponent extends Component{
                 }
             }
         }
+        
+        if( !empty($tmp) ){
+            $conditions['OR'] = $tmp;
+        }
+
         return $conditions;
     }
     

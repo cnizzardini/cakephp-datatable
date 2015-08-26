@@ -1,5 +1,5 @@
 {
-    "name": "klarkc/cakephp-datatable",
+    "name": "cnizzdotcom/cakephp-datatable",
     "description": "Provides server-side interoperability between CakePHP 2.x and jQuery DataTables plugin.",
     "type": "cakephp-plugin",
     "require": {

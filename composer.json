@@ -3,7 +3,7 @@
     "description": "Provides server-side interoperability between CakePHP 2.x and jQuery DataTables plugin.",
     "type": "cakephp-plugin",
     "require": {
-        "cakephp/cakephp": "2.*",
+        "cakephp/cakephp": "~2.3",
         "php": ">=5.3"
     },
     "license": "MIT",

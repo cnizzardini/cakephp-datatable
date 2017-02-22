@@ -97,12 +97,30 @@ class DataTableComponent extends Component{
         // check for WHERE statement in GET request
         if(isset($httpGet) && !empty($httpGet['sSearch'])){
             $conditions = $this->getWhereConditions();
-
+        
+            $this->controller->paginate = array_merge_recursive($this->controller->paginate, array('conditions'=>$conditions));
+        
             if( !empty($this->controller->paginate['contain']) ){
-                $this->controller->paginate = array_merge_recursive($this->controller->paginate, array('contain'=>$conditions));
+                // Apply the conditions to the root model fields
+                $fields = !empty($this->fields) ? $this->fields : $this->controller->paginate['fields'];
+            
+                $modelConditions = array();
+                foreach($fields as $x => $column){
+                    // Check that the field is searchable
+                    if( $this->controller->request->query['bSearchable_'.$x] == 'true'){
+                        list($table, $field) = explode('.', $column);
+                    
+                        // Check that the field is part of the root model with or without the model name appended
+                        if (($table == $this->model->name && in_array($field, $this->controller->paginate['fields'])) || in_array($column, $this->controller->paginate['fields'])){
+                            $modelConditions[] = $column.' LIKE "%'.$this->controller->request->query['sSearch'].'%"';
+                        }
+                    }
+                }
+            
+                $this->controller->paginate = array_merge_recursive($this->controller->paginate, array('conditions'=>array("OR" => $modelConditions)));
             }
             else{
-                $this->controller->paginate = array_merge_recursive($this->controller->paginate, array('conditions'=>array('AND'=>$conditions)));
+                $this->controller->paginate = array_merge_recursive($this->controller->paginate, array('conditions'=>$conditions));
             }
             $isFiltered = true;
         }
@@ -232,6 +250,8 @@ class DataTableComponent extends Component{
             
             // only create conditions on bSearchable fields
             if( $this->controller->request->query['bSearchable_'.$x] == 'true' ){
+                
+                list($table, $field) = explode('.', $column);
                 
                 if($this->mDataProp == true){
                     $conditions['OR'][] = array(
